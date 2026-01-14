@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768383199,
+  "last_digest_ts": 1768398850,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-14_10",
+  "last_slot_id": "2026-01-14_14",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -21,7 +21,15 @@
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768383199,
     "7e8fff02c09c4251092a32803ea7c0f1c54cdc41": 1768383199,
     "7989578061ea33720c451f02ebcf7a3b14967fcb": 1768383199,
-    "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768383199
+    "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768383199,
+    "0cac13e68b73d64d28290455611d495be22cd6ad": 1768398850,
+    "7f7786337bde3b38a2e4608e6db6913a6db8e8d1": 1768398850,
+    "45e4d51c9bd1fa857403d0da298aae62053e896b": 1768398850,
+    "9ab9a2a49c51a1eac396872695dafc158affc41e": 1768398850,
+    "df5ea8961f4459907a117187c6e4a2b53feda64a": 1768398850,
+    "7f967f57b0a5de2fa00b3a97a76d095dccb10983": 1768398850,
+    "ec5d94de3233799b81d901dd56df09380fdc532d": 1768398850,
+    "2e38ace0405d22e42360e5f8381d01bd8b2dba62": 1768398850
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -79,6 +87,62 @@
       "last_pub_ts": 1768366033,
       "last_url_hash": "c3d584f39ddea7d17a16637a7be4c0ad37729a44",
       "last_title": "Russische Drohnen erzwingen Notabschaltungen in Krywyj Rih"
+    },
+    "hohe schulden steigende zinsen anleihen bleiben gefragt": {
+      "last_sent_ts": 1768398850,
+      "last_score": 9.485416666666666,
+      "last_pub_ts": 1768391124,
+      "last_url_hash": "0cac13e68b73d64d28290455611d495be22cd6ad",
+      "last_title": "Hohe Schulden, steigende Zinsen - Anleihen bleiben gefragt"
+    },
+    "geoökonomische konfrontation aktuell größte globale gefahr": {
+      "last_sent_ts": 1768398850,
+      "last_score": 7.292305555555555,
+      "last_pub_ts": 1768398572,
+      "last_url_hash": "7f7786337bde3b38a2e4608e6db6913a6db8e8d1",
+      "last_title": "\"Geoökonomische Konfrontation\": aktuell die größte globale Gefahr?"
+    },
+    "geldmarkt etfs zinsen diesem ertrag können rechnen": {
+      "last_sent_ts": 1768398850,
+      "last_score": 6.582861111111111,
+      "last_pub_ts": 1768373032,
+      "last_url_hash": "45e4d51c9bd1fa857403d0da298aae62053e896b",
+      "last_title": "Geldmarkt-ETFs und Zinsen: Mit diesem Ertrag können Sie rechnen"
+    },
+    "insolvenz stellen fallen führungskräfte müssen gehen": {
+      "last_sent_ts": 1768398850,
+      "last_score": 5.815638888888889,
+      "last_pub_ts": 1768388612,
+      "last_url_hash": "9ab9a2a49c51a1eac396872695dafc158affc41e",
+      "last_title": "KTM-Insolvenz: 500 Stellen fallen weg – Führungskräfte müssen gehen"
+    },
+    "abwarten luft anhalten israel angriff iran vorbereitet": {
+      "last_sent_ts": 1768398850,
+      "last_score": 4.876611111111111,
+      "last_pub_ts": 1768398007,
+      "last_url_hash": "df5ea8961f4459907a117187c6e4a2b53feda64a",
+      "last_title": "Abwarten und Luft anhalten - Israel auf Angriff aus dem Iran vorbereitet"
+    },
+    "nach korruptionsskandal selenskyjs werte erholen sich": {
+      "last_sent_ts": 1768398850,
+      "last_score": 2.6064999999999996,
+      "last_pub_ts": 1768363083,
+      "last_url_hash": "7f967f57b0a5de2fa00b3a97a76d095dccb10983",
+      "last_title": "Nach Korruptionsskandal: Selenskyjs Werte erholen sich"
+    },
+    "hilfszusage präsidenten trump iran": {
+      "last_sent_ts": 1768398850,
+      "last_score": 2.5,
+      "last_pub_ts": 1768283141,
+      "last_url_hash": "ec5d94de3233799b81d901dd56df09380fdc532d",
+      "last_title": "Hilfszusage des US-Präsidenten: Was hat Trump mit dem Iran vor?"
+    },
+    "vier tote russischen raketenangriff großstadt charkiw": {
+      "last_sent_ts": 1768398850,
+      "last_score": 2.5,
+      "last_pub_ts": 1768289985,
+      "last_url_hash": "2e38ace0405d22e42360e5f8381d01bd8b2dba62",
+      "last_title": "Vier Tote bei russischen Raketenangriff auf Großstadt Charkiw"
     }
   }
 }
