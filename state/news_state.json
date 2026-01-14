@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768398850,
+  "last_digest_ts": 1768410147,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-14_14",
+  "last_slot_id": "2026-01-14_18",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -29,7 +29,15 @@
     "df5ea8961f4459907a117187c6e4a2b53feda64a": 1768398850,
     "7f967f57b0a5de2fa00b3a97a76d095dccb10983": 1768398850,
     "ec5d94de3233799b81d901dd56df09380fdc532d": 1768398850,
-    "2e38ace0405d22e42360e5f8381d01bd8b2dba62": 1768398850
+    "2e38ace0405d22e42360e5f8381d01bd8b2dba62": 1768398850,
+    "e2ecc37277f32de4c830a0ef1b943f54a46ebd7f": 1768410147,
+    "7cce2d85be4f4d8f6bc0ce84d301325cc1b1c7ca": 1768410147,
+    "75723b8b3ffcc0ddb2bd0562c32b1f788fbbf1c5": 1768410147,
+    "8ed64c217ec6a22bd1c13428710d1c31e1f62d86": 1768410147,
+    "3df1b7e840f510a6f56e4d80396abaa18daad29d": 1768410147,
+    "efa8372cee2a77b6d8eed8266ddef15c96d78ba5": 1768410147,
+    "f54b617976cde942325b78f324f93d3e92e9c475": 1768410147,
+    "87e4327e0892dbab86c4cbb6950277bb1b5d6896": 1768410147
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -143,6 +151,62 @@
       "last_pub_ts": 1768289985,
       "last_url_hash": "2e38ace0405d22e42360e5f8381d01bd8b2dba62",
       "last_title": "Vier Tote bei russischen Raketenangriff auf Großstadt Charkiw"
+    },
+    "viele tote unglück thailand rast umgestürzten kran": {
+      "last_sent_ts": 1768410147,
+      "last_score": 5.501523148148149,
+      "last_pub_ts": 1768398424,
+      "last_url_hash": "e2ecc37277f32de4c830a0ef1b943f54a46ebd7f",
+      "last_title": "Viele Tote bei Unglück in Thailand - Zug rast in umgestürzten Kran"
+    },
+    "internationale notenbanker stellen sich hinter chef powell": {
+      "last_sent_ts": 1768410147,
+      "last_score": 4.9,
+      "last_pub_ts": 1768311640,
+      "last_url_hash": "7cce2d85be4f4d8f6bc0ce84d301325cc1b1c7ca",
+      "last_title": "Internationale Notenbanker stellen sich hinter Fed-Chef Powell"
+    },
+    "russlands angriffskrieg alle ukraine news live ticker": {
+      "last_sent_ts": 1768410147,
+      "last_score": 4.664453703703703,
+      "last_pub_ts": 1768408750,
+      "last_url_hash": "75723b8b3ffcc0ddb2bd0562c32b1f788fbbf1c5",
+      "last_title": "Russlands Angriffskrieg - Alle Ukraine-News im Live-Ticker"
+    },
+    "polizei schießt verdächtigen nieder messerangriff ulmer einkaufszentrum": {
+      "last_sent_ts": 1768410147,
+      "last_score": 4.652384259259259,
+      "last_pub_ts": 1768408276,
+      "last_url_hash": "8ed64c217ec6a22bd1c13428710d1c31e1f62d86",
+      "last_title": "Polizei schießt Verdächtigen nieder - Messerangriff in Ulmer Einkaufszentrum"
+    },
+    "repubblica linksliberales vorzeige blatt ungewisser zukunft": {
+      "last_sent_ts": 1768410147,
+      "last_score": 2.342972222222222,
+      "last_pub_ts": 1768408093,
+      "last_url_hash": "3df1b7e840f510a6f56e4d80396abaa18daad29d",
+      "last_title": "la Repubblica: Linksliberales Vorzeige-Blatt vor ungewisser Zukunft"
+    },
+    "trump bekräftigt treffen seinen anspruch grönland": {
+      "last_sent_ts": 1768410147,
+      "last_score": 2.1389722222222223,
+      "last_pub_ts": 1768400749,
+      "last_url_hash": "efa8372cee2a77b6d8eed8266ddef15c96d78ba5",
+      "last_title": "Trump bekräftigt vor Treffen seinen Anspruch auf Grönland"
+    },
+    "viele tote demonstranten iran drohen hinrichtungen": {
+      "last_sent_ts": 1768410147,
+      "last_score": 2.0629166666666667,
+      "last_pub_ts": 1768398011,
+      "last_url_hash": "f54b617976cde942325b78f324f93d3e92e9c475",
+      "last_title": "Viele tote Demonstranten im Iran - nun drohen Hinrichtungen"
+    },
+    "ukraine entwickelt bodendrohnen kampf front": {
+      "last_sent_ts": 1768410147,
+      "last_score": 1.963111111111111,
+      "last_pub_ts": 1768394418,
+      "last_url_hash": "87e4327e0892dbab86c4cbb6950277bb1b5d6896",
+      "last_title": "Ukraine entwickelt Bodendrohnen für den Kampf an der Front"
     }
   }
 }
