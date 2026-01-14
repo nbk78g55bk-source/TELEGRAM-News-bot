@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768382084,
+  "last_digest_ts": 1768383199,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -11,5 +11,74 @@
     "c543920f8ee98407e47defc7065ad7141d3f9a52": 1768382084,
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
+  },
+  "last_slot_id": "2026-01-14_10",
+  "seen_urls": {
+    "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
+    "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
+    "ff963f7d36b22773a6f5b728548ad091b776c7ff": 1768383199,
+    "cbba44df278962471a4322109663c38afe8dd531": 1768383199,
+    "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768383199,
+    "7e8fff02c09c4251092a32803ea7c0f1c54cdc41": 1768383199,
+    "7989578061ea33720c451f02ebcf7a3b14967fcb": 1768383199,
+    "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768383199
+  },
+  "topics": {
+    "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
+      "last_sent_ts": 1768383199,
+      "last_score": 9.094583333333333,
+      "last_pub_ts": 1768361403,
+      "last_url_hash": "f2f2a419c653700c137c083f10d46410ac365a67",
+      "last_title": "Tagesgeld-Zinsen aktuell: Bis zu 3,2 Prozent – eine Bank zahlt am meisten"
+    },
+    "trump droht iran zöllen trifft auch deutsche exporteure": {
+      "last_sent_ts": 1768383199,
+      "last_score": 6.607277777777777,
+      "last_pub_ts": 1768315060,
+      "last_url_hash": "c58eec6b43a90830802585a0566ad7706f46e3c5",
+      "last_title": "Trump droht mit Iran-Zöllen - trifft das auch deutsche Exporteure?"
+    },
+    "china kritisiert trumps zollankündigung gegen iran": {
+      "last_sent_ts": 1768383199,
+      "last_score": 6.299861111111111,
+      "last_pub_ts": 1768303993,
+      "last_url_hash": "ff963f7d36b22773a6f5b728548ad091b776c7ff",
+      "last_title": "China kritisiert Trumps Zollankündigung gegen den Iran"
+    },
+    "exporte boomen chinas handelsüberschuss erreicht rekordniveau": {
+      "last_sent_ts": 1768383199,
+      "last_score": 5.789583333333333,
+      "last_pub_ts": 1768375623,
+      "last_url_hash": "cbba44df278962471a4322109663c38afe8dd531",
+      "last_title": "Exporte boomen: Chinas Handelsüberschuss erreicht Rekordniveau"
+    },
+    "mindestens tote zugunglück thailand": {
+      "last_sent_ts": 1768383199,
+      "last_score": 4.733555555555555,
+      "last_pub_ts": 1768377206,
+      "last_url_hash": "4c618ba0702c9bed7c820803f99a8f4fc7070776",
+      "last_title": "Mindestens 22 Tote bei Zugunglück in Thailand"
+    },
+    "proteste iran wadephul härtere sanktionen gegen teheran": {
+      "last_sent_ts": 1768383199,
+      "last_score": 3.7,
+      "last_pub_ts": 1768262577,
+      "last_url_hash": "7e8fff02c09c4251092a32803ea7c0f1c54cdc41",
+      "last_title": "Proteste im Iran: Wadephul für härtere Sanktionen gegen Teheran"
+    },
+    "massendemonstrationen iran gefährlich werden proteste regime": {
+      "last_sent_ts": 1768383199,
+      "last_score": 3.602638888888889,
+      "last_pub_ts": 1768336493,
+      "last_url_hash": "7989578061ea33720c451f02ebcf7a3b14967fcb",
+      "last_title": "Massendemonstrationen im Iran: Wie gefährlich werden die Proteste für das Regime?"
+    },
+    "russische drohnen erzwingen notabschaltungen krywyj": {
+      "last_sent_ts": 1768383199,
+      "last_score": 3.123194444444444,
+      "last_pub_ts": 1768366033,
+      "last_url_hash": "c3d584f39ddea7d17a16637a7be4c0ad37729a44",
+      "last_title": "Russische Drohnen erzwingen Notabschaltungen in Krywyj Rih"
+    }
   }
 }
