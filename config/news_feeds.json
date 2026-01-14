@@ -1,75 +1,23 @@
 {
   "de": [
-    {
-      "name": "Tagesschau – Wirtschaft",
-      "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml",
-      "weight": 1.3
-    },
-    {
-      "name": "Tagesschau – Inland",
-      "url": "https://www.tagesschau.de/inland/index~rss2.xml",
-      "weight": 1.0
-    },
-    {
-      "name": "Handelsblatt – Wirtschaft",
-      "url": "https://www.handelsblatt.com/contentexport/feed/wirtschaft",
-      "weight": 1.4
-    },
-    {
-      "name": "ZEIT ONLINE – Wirtschaft",
-      "url": "https://newsfeed.zeit.de/wirtschaft/index",
-      "weight": 1.2
-    }
+    { "name": "Tagesschau – Wirtschaft", "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml", "weight": 1.3 },
+    { "name": "Tagesschau – Inland", "url": "https://www.tagesschau.de/inland/index~rss2.xml", "weight": 1.0 },
+    { "name": "Handelsblatt – Wirtschaft", "url": "https://www.handelsblatt.com/contentexport/feed/wirtschaft", "weight": 1.4 },
+    { "name": "ZEIT ONLINE – Wirtschaft", "url": "https://newsfeed.zeit.de/wirtschaft/index", "weight": 1.2 }
   ],
   "us": [
-    {
-      "name": "AP News – Business",
-      "url": "https://apnews.com/rss/business",
-      "weight": 1.4
-    },
-    {
-      "name": "AP News – US News",
-      "url": "https://apnews.com/rss/us-news",
-      "weight": 1.2
-    },
-    {
-      "name": "CNBC – Economy",
-      "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
-      "weight": 1.3
-    },
-    {
-      "name": "CNBC – Top News",
-      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-      "weight": 1.1
-    }
+    { "name": "CNBC – Economy", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258", "weight": 1.3 },
+    { "name": "CNBC – Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147", "weight": 1.2 },
+    { "name": "NYTimes – Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "weight": 1.2 },
+    { "name": "WSJ / Dow Jones – U.S. Business", "url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml", "weight": 1.2 },
+    { "name": "Dow Jones – Markets", "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml", "weight": 1.2 },
+    { "name": "NPR – Business", "url": "https://feeds.npr.org/1006/rss.xml", "weight": 1.0 }
   ],
   "eu": [
-    {
-      "name": "Politico Europe",
-      "url": "https://www.politico.eu/feed/",
-      "weight": 1.1
-    },
-    {
-      "name": "EU Observer",
-      "url": "https://euobserver.com/rss.xml",
-      "weight": 1.0
-    }
+    { "name": "Politico Europe", "url": "https://www.politico.eu/feed/", "weight": 1.1 }
   ],
   "world": [
-    {
-      "name": "BBC – Business",
-      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
-      "weight": 1.2
-    },
-    {
-      "name": "BBC – World",
-      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-      "weight": 1.1
-    },
-    {
-      "name": "Al Jazeera – Economy",
-      "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "weight": 1.0
-    }
+    { "name": "BBC – Business", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "weight": 1.1 },
+    { "name": "BBC – World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "weight": 1.0 }
   ]
 }
