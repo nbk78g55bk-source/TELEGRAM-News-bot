@@ -1,23 +1,39 @@
 {
   "de": [
-    { "name": "Tagesschau – Wirtschaft", "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml", "weight": 1.3 },
-    { "name": "Tagesschau – Inland", "url": "https://www.tagesschau.de/inland/index~rss2.xml", "weight": 1.0 },
-    { "name": "Handelsblatt – Wirtschaft", "url": "https://www.handelsblatt.com/contentexport/feed/wirtschaft", "weight": 1.4 },
-    { "name": "ZEIT ONLINE – Wirtschaft", "url": "https://newsfeed.zeit.de/wirtschaft/index", "weight": 1.2 }
+    { "name": "Tagesschau – Wirtschaft", "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml", "weight": 1.2 },
+    { "name": "Tagesschau – Inland", "url": "https://www.tagesschau.de/inland/index~rss2.xml", "weight": 1.1 },
+
+    { "name": "t-online – Wirtschaft & Finanzen", "url": "https://www.t-online.de/finanzen/feed.rss", "weight": 1.2 },
+    { "name": "t-online – Nachrichten", "url": "https://www.t-online.de/nachrichten/feed.rss", "weight": 1.1 },
+
+    { "name": "BILD – News", "url": "http://www.bild.de/rss-feeds/rss-16725492,feed=news.bild.html", "weight": 1.1 },
+    { "name": "BILD – Politik", "url": "http://www.bild.de/rss-feeds/rss-16725492,feed=politik.bild.html", "weight": 1.1 },
+
+    { "name": "Journalistenwatch", "url": "https://journalistenwatch.com/feed/", "weight": 1.1 }
   ],
   "us": [
-    { "name": "CNBC – Economy", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258", "weight": 1.3 },
-    { "name": "CNBC – Business", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147", "weight": 1.2 },
-    { "name": "NYTimes – Business", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml", "weight": 1.2 },
-    { "name": "WSJ / Dow Jones – U.S. Business", "url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml", "weight": 1.2 },
-    { "name": "Dow Jones – Markets", "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml", "weight": 1.2 },
-    { "name": "NPR – Business", "url": "https://feeds.npr.org/1006/rss.xml", "weight": 1.0 }
+    { "name": "Tagesschau – Ausland (USA/International)", "url": "https://www.tagesschau.de/ausland/index~rss2.xml", "weight": 1.2 },
+    { "name": "t-online – Nachrichten (USA-relevant)", "url": "https://www.t-online.de/nachrichten/feed.rss", "weight": 1.1 },
+    { "name": "t-online – Finanzen (USA-relevant)", "url": "https://www.t-online.de/finanzen/feed.rss", "weight": 1.2 },
+
+    { "name": "BILD – News (USA)", "url": "http://www.bild.de/rss-feeds/rss-16725492,feed=news.bild.html", "weight": 1.1 },
+
+    { "name": "Journalistenwatch", "url": "https://journalistenwatch.com/feed/", "weight": 1.1 }
   ],
   "eu": [
-    { "name": "Politico Europe", "url": "https://www.politico.eu/feed/", "weight": 1.1 }
+    { "name": "Tagesschau – Europa", "url": "https://www.tagesschau.de/ausland/europa/index~rss2.xml", "weight": 1.2 },
+    { "name": "t-online – Nachrichten (Europa)", "url": "https://www.t-online.de/nachrichten/feed.rss", "weight": 1.1 },
+
+    { "name": "BILD – Politik", "url": "http://www.bild.de/rss-feeds/rss-16725492,feed=politik.bild.html", "weight": 1.1 },
+
+    { "name": "Journalistenwatch", "url": "https://journalistenwatch.com/feed/", "weight": 1.1 }
   ],
   "world": [
-    { "name": "BBC – Business", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "weight": 1.1 },
-    { "name": "BBC – World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "weight": 1.0 }
+    { "name": "Tagesschau – Ausland", "url": "https://www.tagesschau.de/ausland/index~rss2.xml", "weight": 1.2 },
+    { "name": "t-online – Nachrichten (Ausland)", "url": "https://www.t-online.de/nachrichten/feed.rss", "weight": 1.1 },
+
+    { "name": "BILD – News", "url": "http://www.bild.de/rss-feeds/rss-16725492,feed=news.bild.html", "weight": 1.1 },
+
+    { "name": "Journalistenwatch", "url": "https://journalistenwatch.com/feed/", "weight": 1.1 }
   ]
 }
