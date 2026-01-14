@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768410147,
+  "last_digest_ts": 1768417209,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-14_18",
+  "last_slot_id": "2026-01-14_20",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -37,7 +37,15 @@
     "3df1b7e840f510a6f56e4d80396abaa18daad29d": 1768410147,
     "efa8372cee2a77b6d8eed8266ddef15c96d78ba5": 1768410147,
     "f54b617976cde942325b78f324f93d3e92e9c475": 1768410147,
-    "87e4327e0892dbab86c4cbb6950277bb1b5d6896": 1768410147
+    "87e4327e0892dbab86c4cbb6950277bb1b5d6896": 1768410147,
+    "d66aaea4e21ac664e7e7096918b59986d0aaef84": 1768417209,
+    "e5c4e782f3512a4b9086059e5ed7c30f6c35f426": 1768417209,
+    "94f13637b85fd7c698a9a08d12a1d6238794d8af": 1768417209,
+    "408f96f79452dede785979f5954206c315d54f53": 1768417209,
+    "c10a5025000356233157d75b35c86d61f3c9afd7": 1768417209,
+    "11120422cc4a1b5545170d317c515254b7c39aa5": 1768417209,
+    "59cc2c669ae4e62891d6d67e52d2729a0e058b11": 1768417209,
+    "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352": 1768417209
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -207,6 +215,62 @@
       "last_pub_ts": 1768394418,
       "last_url_hash": "87e4327e0892dbab86c4cbb6950277bb1b5d6896",
       "last_title": "Ukraine entwickelt Bodendrohnen für den Kampf an der Front"
+    },
+    "verbindung deutschem formel fahrer luxusauto händler meldet insolvenz": {
+      "last_sent_ts": 1768417209,
+      "last_score": 5.7414351851851855,
+      "last_pub_ts": 1768414909,
+      "last_url_hash": "d66aaea4e21ac664e7e7096918b59986d0aaef84",
+      "last_title": "Verbindung zu deutschem Ex-Formel-1-Fahrer - Luxusauto-Händler meldet Insolvenz an"
+    },
+    "bürgergeld reform grüne kritisieren regierung wollen inflationspuffer": {
+      "last_sent_ts": 1768417209,
+      "last_score": 5.663136574074074,
+      "last_pub_ts": 1768411834,
+      "last_url_hash": "e5c4e782f3512a4b9086059e5ed7c30f6c35f426",
+      "last_title": "Bürgergeld-Reform: Grüne kritisieren Regierung und wollen Inflationspuffer"
+    },
+    "warnung washington iran droht angriff nato gebiet": {
+      "last_sent_ts": 1768417209,
+      "last_score": 4.629034722222222,
+      "last_pub_ts": 1768414422,
+      "last_url_hash": "94f13637b85fd7c698a9a08d12a1d6238794d8af",
+      "last_title": "Warnung an Washington - Iran droht mit Angriff auf Nato-Gebiet"
+    },
+    "messerangriff polizei stoppt tatverdächtigen schüssen": {
+      "last_sent_ts": 1768417209,
+      "last_score": 4.471469907407408,
+      "last_pub_ts": 1768408234,
+      "last_url_hash": "408f96f79452dede785979f5954206c315d54f53",
+      "last_title": "Messerangriff in Ulm - Polizei stoppt Tatverdächtigen mit Schüssen"
+    },
+    "setzen visaverfahren dauerhafte aufenthalte ländern": {
+      "last_sent_ts": 1768417209,
+      "last_score": 2.306694444444444,
+      "last_pub_ts": 1768413850,
+      "last_url_hash": "c10a5025000356233157d75b35c86d61f3c9afd7",
+      "last_title": "USA setzen Visaverfahren für dauerhafte Aufenthalte aus 75 Ländern aus"
+    },
+    "sexualisierte fotos genug": {
+      "last_sent_ts": 1768417209,
+      "last_score": 2.27825,
+      "last_pub_ts": 1768412826,
+      "last_url_hash": "11120422cc4a1b5545170d317c515254b7c39aa5",
+      "last_title": "Sexualisierte Fotos bei X - tut die EU genug?"
+    },
+    "aktivisten sprechen mehr toten iran": {
+      "last_sent_ts": 1768417209,
+      "last_score": 1.5996944444444445,
+      "last_pub_ts": 1768388398,
+      "last_url_hash": "59cc2c669ae4e62891d6d67e52d2729a0e058b11",
+      "last_title": "Aktivisten sprechen von mehr als 2.500 Toten im Iran"
+    },
+    "grönland gipfel außenminister dänemark treffen sich": {
+      "last_sent_ts": 1768417209,
+      "last_score": 1.5496666666666663,
+      "last_pub_ts": 1768386597,
+      "last_url_hash": "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352",
+      "last_title": "Grönland-Gipfel: Außenminister von Dänemark und USA treffen sich"
     }
   }
 }
