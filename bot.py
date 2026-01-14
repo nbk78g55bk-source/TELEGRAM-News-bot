@@ -23,12 +23,10 @@ NEWS_TTL_HOURS = int(os.getenv("NEWS_TTL_HOURS", "72"))
 NEWS_STATE_PATH = os.getenv("NEWS_STATE_PATH", "state/news_state.json")
 FEEDS_PATH = os.getenv("NEWS_FEEDS_PATH", "config/news_feeds.json")
 
-USER_AGENT = os.getenv("NEWS_USER_AGENT", "telegram-news-bot/2.1 (LibreTranslate; GitHub Actions)")
+USER_AGENT = os.getenv("NEWS_USER_AGENT", "telegram-news-bot/2.3 (LibreTranslate; GitHub Actions)")
 
-# Frequenz: alle 2 Stunden
 DIGEST_INTERVAL_SECONDS = int(os.getenv("NEWS_DIGEST_INTERVAL_SECONDS", str(2 * 3600)))
 
-# Ausgabe-Setup (DE/US vorne)
 REGION_TOTAL = {
     "de": int(os.getenv("NEWS_DE_TOTAL", "6")),
     "us": int(os.getenv("NEWS_US_TOTAL", "6")),
@@ -48,7 +46,6 @@ MIN_SCORE = {
     "world": float(os.getenv("NEWS_MIN_SCORE_WORLD", "1.0")),
 }
 
-# LibreTranslate Endpunkte (kostenlos; ohne API-Key). Wir nutzen Failover.
 LIBRE_ENDPOINTS = [
     os.getenv("LIBRETRANSLATE_ENDPOINT_1", "https://libretranslate.de/translate").strip(),
     os.getenv("LIBRETRANSLATE_ENDPOINT_2", "https://translate.argosopentech.com/translate").strip(),
@@ -57,13 +54,17 @@ LIBRE_TIMEOUT = int(os.getenv("LIBRETRANSLATE_TIMEOUT", "15"))
 LIBRE_SLEEP_BETWEEN_CALLS_MS = int(os.getenv("LIBRETRANSLATE_SLEEP_MS", "120"))
 
 # Übersetzungsstrategie
-TRANSLATE_SUMMARY = os.getenv("NEWS_TRANSLATE_SUMMARY", "0").strip() == "1"  # default aus (spart Calls)
+TRANSLATE_SUMMARY = os.getenv("NEWS_TRANSLATE_SUMMARY", "0").strip() == "1"  # default aus
+# Ab jetzt: wirklich nur überspringen, wenn DE sehr wahrscheinlich ist
 TRANSLATE_ONLY_IF_NOT_GERMAN = os.getenv("NEWS_TRANSLATE_ONLY_IF_NOT_GERMAN", "1").strip() == "1"
+# Ab jetzt: US/EU/WORLD immer übersetzen (DE bleibt naturgemäß deutsch)
+TRANSLATE_REGIONS = set(
+    (os.getenv("NEWS_TRANSLATE_REGIONS", "us,eu,world").strip() or "us,eu,world")
+    .split(",")
+)
 
-# Hard limit: Telegram ~4096 chars, wir bleiben konservativ
 TELEGRAM_CHAR_LIMIT = int(os.getenv("NEWS_TELEGRAM_CHAR_LIMIT", "3900"))
 
-# Schlüsselwörter zur Wirtschaftsgewichtung
 ECON_KEYWORDS = [
     "inflation", "cpi", "ppi", "fed", "fomc", "ecb", "ezb", "interest rate", "rate hike", "rate cut",
     "gdp", "bip", "recession", "rezession", "unemployment", "arbeitsmarkt", "jobs", "payrolls",
@@ -115,13 +116,13 @@ def clean_text(s: str) -> str:
     return s
 
 def strip_control_chars(s: str) -> str:
-    """
-    Telegram HTML ist empfindlich bei Steuerzeichen.
-    Entfernt ASCII-Control-Chars außer \n und \t.
-    """
     if not s:
         return s
     return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]", "", s)
+
+def decode_entities(s: str) -> str:
+    # RSS liefert oft &#x27; etc.
+    return html.unescape(s or "")
 
 def parse_entry_time(entry) -> Optional[int]:
     t = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
@@ -140,7 +141,6 @@ def normalize_url(url: str) -> str:
         query = parse_qsl(parts.query, keep_blank_values=True)
         drop_prefixes = ("utm_",)
         drop_keys = {"ref", "referrer", "cmpid", "cmp", "ocid", "smid", "mc_cid", "mc_eid"}
-
         new_query = []
         for k, v in query:
             lk = k.lower()
@@ -149,7 +149,6 @@ def normalize_url(url: str) -> str:
             if lk in drop_keys:
                 continue
             new_query.append((k, v))
-
         query_str = urlencode(new_query, doseq=True)
         normalized = urlunsplit((parts.scheme, parts.netloc, parts.path, query_str, ""))
         return normalized.rstrip("/")
@@ -186,22 +185,29 @@ def berlin_time_str() -> str:
     except Exception:
         return datetime.now().strftime("%d.%m.%Y %H:%M")
 
-def looks_german(text: str) -> bool:
+def looks_german_strict(text: str) -> bool:
+    """
+    Striktere Heuristik: Überspringe nur, wenn sehr klar Deutsch.
+    Das verhindert, dass Englisch fälschlich nicht übersetzt wird.
+    """
     t = (text or "").lower()
+    # Umlaute/ß sind starkes Signal
     if any(ch in t for ch in ["ä", "ö", "ü", "ß"]):
         return True
-    de_markers = [" der ", " die ", " das ", " und ", " nicht ", " ein ", " eine ", " wird ", " wurden ", " über "]
-    return any(m in f" {t} " for m in de_markers)
+    # mehrere deutsche Funktionswörter => starkes Signal
+    de_words = [" der ", " die ", " das ", " und ", " nicht ", " für ", " mit ", " auf ", " im ", " am ", " als ", " wird "]
+    hits = sum(1 for w in de_words if w in f" {t} ")
+    return hits >= 2
 
 # -----------------------
 # LibreTranslate translation (free, with failover + caching)
 # -----------------------
 def translate_en_to_de(text: str, session: requests.Session, cache: Dict[str, str]) -> str:
-    text = strip_control_chars(clean_text(text))
+    text = strip_control_chars(clean_text(decode_entities(text)))
     if not text:
         return text
 
-    if TRANSLATE_ONLY_IF_NOT_GERMAN and looks_german(text):
+    if TRANSLATE_ONLY_IF_NOT_GERMAN and looks_german_strict(text):
         return text
 
     key = sha1(text)
@@ -212,15 +218,10 @@ def translate_en_to_de(text: str, session: requests.Session, cache: Dict[str, st
 
     for ep in [e for e in LIBRE_ENDPOINTS if e]:
         try:
-            r = session.post(
-                ep,
-                json=payload,
-                timeout=LIBRE_TIMEOUT,
-                headers={"User-Agent": USER_AGENT},
-            )
+            r = session.post(ep, json=payload, timeout=LIBRE_TIMEOUT, headers={"User-Agent": USER_AGENT})
             if r.ok:
                 data = r.json()
-                translated = strip_control_chars(clean_text(data.get("translatedText", ""))) or text
+                translated = strip_control_chars(clean_text(decode_entities(data.get("translatedText", "")))) or text
                 cache[key] = translated
                 if LIBRE_SLEEP_BETWEEN_CALLS_MS > 0:
                     time.sleep(LIBRE_SLEEP_BETWEEN_CALLS_MS / 1000.0)
@@ -249,7 +250,6 @@ def send_telegram_html_with_fallback(text_html: str) -> None:
         raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
 
     text_html = strip_control_chars(text_html or "").strip()
-    # Sicherheit: niemals leere/zu kurze Messages senden
     if len(text_html) < 10:
         print("Skip send: message too short/empty.")
         return
@@ -265,11 +265,8 @@ def send_telegram_html_with_fallback(text_html: str) -> None:
     if ok:
         return
 
-    # Häufigster Fall: "can't parse entities" => HTML kaputt.
-    # Dann fallback: Plain text ohne parse_mode.
     print(f"Telegram HTML send failed; fallback to plain. Error: {err}")
-
-    text_plain = re.sub(r"<[^>]+>", "", text_html)  # Tags entfernen
+    text_plain = re.sub(r"<[^>]+>", "", text_html)
     text_plain = strip_control_chars(text_plain).strip()
     if len(text_plain) < 10:
         print("Skip fallback send: plain message too short/empty.")
@@ -300,8 +297,7 @@ def build_digest_html(groups: Dict[str, List[Item]]) -> str:
             continue
 
         for it in region_items:
-            # sanitize
-            title = strip_control_chars(clean_text(it.title))
+            title = strip_control_chars(clean_text(decode_entities(it.title)))
             url = strip_control_chars(clean_text(it.url))
             src = strip_control_chars(clean_text(it.source))
 
@@ -318,7 +314,6 @@ def build_digest_html(groups: Dict[str, List[Item]]) -> str:
     if len(text) > TELEGRAM_CHAR_LIMIT:
         text = text[:TELEGRAM_CHAR_LIMIT].rstrip() + "\n<i>…(gekürzt)</i>"
 
-    # Wenn wirklich gar keine Links drin sind, lieber nichts senden.
     if total_links == 0:
         return ""
     return text
@@ -363,9 +358,9 @@ def main() -> None:
                 continue
 
             for entry in parsed.entries[:60]:
-                title = strip_control_chars(clean_text(getattr(entry, "title", "") or ""))
+                title = strip_control_chars(clean_text(decode_entities(getattr(entry, "title", "") or "")))
                 link = strip_control_chars(clean_text(getattr(entry, "link", "") or ""))
-                summary = strip_control_chars(clean_text(getattr(entry, "summary", "") or ""))
+                summary = strip_control_chars(clean_text(decode_entities(getattr(entry, "summary", "") or "")))
 
                 if not title or not link:
                     continue
@@ -393,18 +388,19 @@ def main() -> None:
         print("No new items collected (feeds empty or all seen).")
         return
 
-    # 2) Translate to German
+    # 2) Translate to German for selected regions (default: us, eu, world)
     translate_cache: Dict[str, str] = {}
     for it in items:
-        it.title = translate_en_to_de(it.title, session=session, cache=translate_cache)
-        if TRANSLATE_SUMMARY and it.summary:
-            it.summary = translate_en_to_de(it.summary, session=session, cache=translate_cache)
+        if it.region in TRANSLATE_REGIONS:
+            it.title = translate_en_to_de(it.title, session=session, cache=translate_cache)
+            if TRANSLATE_SUMMARY and it.summary:
+                it.summary = translate_en_to_de(it.summary, session=session, cache=translate_cache)
 
     # 3) Score & sort
     scored: List[Tuple[float, Item]] = [(quality_score(it), it) for it in items]
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    # 4) Bucket by econ vs normal
+    # 4) Buckets
     econ_bucket: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
     norm_bucket: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
 
@@ -417,7 +413,6 @@ def main() -> None:
     groups: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
     for region, total in REGION_TOTAL.items():
         econ_target = int(round(total * REGION_ECON_SHARE[region]))
-
         sel: List[Item] = []
         sel.extend(econ_bucket[region][:econ_target])
 
@@ -438,7 +433,7 @@ def main() -> None:
         print("No items selected after scoring/filtering.")
         return
 
-    # 6) Send Telegram (HTML + fallback)
+    # 6) Send Telegram
     msg = build_digest_html(groups)
     if not msg:
         print("Skip send: message would have no links/content.")
