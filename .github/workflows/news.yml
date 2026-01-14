@@ -1,1 +1,52 @@
+name: News Bot
 
+on:
+  schedule:
+    - cron: "5 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests feedparser
+
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NEWS_LOOKBACK_HOURS: "36"
+          NEWS_TTL_HOURS: "72"
+          NEWS_DE_TOTAL: "6"
+          NEWS_US_TOTAL: "6"
+          NEWS_EU_TOTAL: "3"
+          NEWS_WORLD_TOTAL: "4"
+          NEWS_ECON_SHARE_DE: "0.67"
+          NEWS_ECON_SHARE_US: "0.67"
+          NEWS_ECON_SHARE_EU: "0.67"
+          NEWS_ECON_SHARE_WORLD: "0.50"
+        run: python bot.py
+
+      - name: Commit state if changed
+        run: |
+          if git status --porcelain | grep -q "state/news_state.json"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add state/news_state.json
+            git commit -m "Update news bot state"
+            git push
+          else
+            echo "No state changes."
+          fi
