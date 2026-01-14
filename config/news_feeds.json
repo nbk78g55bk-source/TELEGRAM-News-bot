@@ -1,1 +1,16 @@
-
+{
+  "de": [
+    { "name": "DE Wirtschaft", "url": "https://BEISPIEL.de/rss", "weight": 1.2 },
+    { "name": "DE News", "url": "https://BEISPIEL.de/rss2", "weight": 1.0 }
+  ],
+  "us": [
+    { "name": "US Business", "url": "https://BEISPIEL.com/rss", "weight": 1.2 },
+    { "name": "US News", "url": "https://BEISPIEL.com/rss2", "weight": 1.0 }
+  ],
+  "eu": [
+    { "name": "EU News", "url": "https://BEISPIEL.eu/rss", "weight": 1.0 }
+  ],
+  "world": [
+    { "name": "World Business", "url": "https://BEISPIEL.world/rss", "weight": 1.1 }
+  ]
+}
