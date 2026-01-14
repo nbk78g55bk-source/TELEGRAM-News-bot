@@ -467,8 +467,9 @@ def main() -> None:
             chosen.append((score, it))
             chosen_sigs.append(sig)
 
-        if len(chosen) < MIN_TOPICS_PER_REGION and not ALLOW_FEWER_THAN_MIN:
-            continue
+        # Weniger Themen sind erlaubt – lieber Qualität als Quantität
+            if len(chosen) < MIN_TOPICS_PER_REGION:
+                pass
 
         if chosen:
             groups_final[region] = chosen
