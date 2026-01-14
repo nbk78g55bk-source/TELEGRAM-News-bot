@@ -19,60 +19,65 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 NEWS_LOOKBACK_HOURS = int(os.getenv("NEWS_LOOKBACK_HOURS", "36"))
-NEWS_TTL_HOURS = int(os.getenv("NEWS_TTL_HOURS", "72"))
+NEWS_TTL_HOURS = int(os.getenv("NEWS_TTL_HOURS", "120"))  # länger, damit Themen nicht wieder auftauchen
 NEWS_STATE_PATH = os.getenv("NEWS_STATE_PATH", "state/news_state.json")
 FEEDS_PATH = os.getenv("NEWS_FEEDS_PATH", "config/news_feeds.json")
 
-USER_AGENT = os.getenv("NEWS_USER_AGENT", "telegram-news-bot/2.3 (LibreTranslate; GitHub Actions)")
+USER_AGENT = os.getenv("NEWS_USER_AGENT", "telegram-news-bot/3.1 (curated; dedupe; timewindow)")
 
-DIGEST_INTERVAL_SECONDS = int(os.getenv("NEWS_DIGEST_INTERVAL_SECONDS", str(2 * 3600)))
+# Nur zwischen 06:00 und 21:00 Uhr (DE Zeit) senden
+ACTIVE_START_HOUR = int(os.getenv("NEWS_ACTIVE_START_HOUR", "6"))
+ACTIVE_END_HOUR = int(os.getenv("NEWS_ACTIVE_END_HOUR", "21"))
 
-REGION_TOTAL = {
-    "de": int(os.getenv("NEWS_DE_TOTAL", "6")),
-    "us": int(os.getenv("NEWS_US_TOTAL", "6")),
-    "eu": int(os.getenv("NEWS_EU_TOTAL", "3")),
-    "world": int(os.getenv("NEWS_WORLD_TOTAL", "4")),
-}
-REGION_ECON_SHARE = {
-    "de": float(os.getenv("NEWS_ECON_SHARE_DE", "0.67")),
-    "us": float(os.getenv("NEWS_ECON_SHARE_US", "0.67")),
-    "eu": float(os.getenv("NEWS_ECON_SHARE_EU", "0.67")),
-    "world": float(os.getenv("NEWS_ECON_SHARE_WORLD", "0.50")),
-}
+# Alle 2h-Slots (06,08,10,...,20). 21:00 soll nicht als Slot zählen.
+SEND_EVERY_N_HOURS = int(os.getenv("NEWS_SEND_EVERY_N_HOURS", "2"))
+
+# Kuratierte Themen pro Region
+MIN_TOPICS_PER_REGION = int(os.getenv("NEWS_MIN_TOPICS_PER_REGION", "2"))
+MAX_TOPICS_PER_REGION = int(os.getenv("NEWS_MAX_TOPICS_PER_REGION", "4"))
+
+# Telegram Limit
+TELEGRAM_CHAR_LIMIT = int(os.getenv("NEWS_TELEGRAM_CHAR_LIMIT", "3900"))
+
+# Wie viel Kontext pro Thema
+BRIEFING_MAX_CHARS = int(os.getenv("NEWS_BRIEFING_MAX_CHARS", "320"))
+
+# “Major Update”-Logik:
+# Thema wird erneut gesendet, wenn:
+# - neuer Artikel deutlich neuer ist ODER
+# - Score deutlich höher ist ODER
+# - Alert-Wörter enthalten sind
+MAJOR_UPDATE_MIN_HOURS = int(os.getenv("NEWS_MAJOR_UPDATE_MIN_HOURS", "6"))   # frühestens nach 6h wieder
+MAJOR_UPDATE_SCORE_DELTA = float(os.getenv("NEWS_MAJOR_UPDATE_SCORE_DELTA", "2.0"))
+
+ALERT_KEYWORDS = [
+    "eilmeldung", "breaking", "urgent", "hackerangriff", "angriff", "explosion",
+    "notstand", "krise", "crash", "stürzt", "massiv", "sanktionen", "zölle",
+    "fed", "ezb", "zins", "insolvenz", "bankrott", "bankrun"
+]
+
+# Reihenfolge / Labels
+REGION_ORDER = ["de", "us", "eu", "world"]
+REGION_TITLES = {"de": "Deutschland", "us": "Amerika (USA)", "eu": "Europa", "world": "Welt"}
+
+# Relevanz/Score
 MIN_SCORE = {
-    "de": float(os.getenv("NEWS_MIN_SCORE_DE", "0.8")),
-    "us": float(os.getenv("NEWS_MIN_SCORE_US", "0.8")),
-    "eu": float(os.getenv("NEWS_MIN_SCORE_EU", "0.8")),
+    "de": float(os.getenv("NEWS_MIN_SCORE_DE", "0.9")),
+    "us": float(os.getenv("NEWS_MIN_SCORE_US", "0.9")),
+    "eu": float(os.getenv("NEWS_MIN_SCORE_EU", "0.9")),
     "world": float(os.getenv("NEWS_MIN_SCORE_WORLD", "1.0")),
 }
 
-LIBRE_ENDPOINTS = [
-    os.getenv("LIBRETRANSLATE_ENDPOINT_1", "https://libretranslate.de/translate").strip(),
-    os.getenv("LIBRETRANSLATE_ENDPOINT_2", "https://translate.argosopentech.com/translate").strip(),
-]
-LIBRE_TIMEOUT = int(os.getenv("LIBRETRANSLATE_TIMEOUT", "15"))
-LIBRE_SLEEP_BETWEEN_CALLS_MS = int(os.getenv("LIBRETRANSLATE_SLEEP_MS", "120"))
-
-# Übersetzungsstrategie
-TRANSLATE_SUMMARY = os.getenv("NEWS_TRANSLATE_SUMMARY", "0").strip() == "1"  # default aus
-# Ab jetzt: wirklich nur überspringen, wenn DE sehr wahrscheinlich ist
-TRANSLATE_ONLY_IF_NOT_GERMAN = os.getenv("NEWS_TRANSLATE_ONLY_IF_NOT_GERMAN", "1").strip() == "1"
-# Ab jetzt: US/EU/WORLD immer übersetzen (DE bleibt naturgemäß deutsch)
-TRANSLATE_REGIONS = set(
-    (os.getenv("NEWS_TRANSLATE_REGIONS", "us,eu,world").strip() or "us,eu,world")
-    .split(",")
-)
-
-TELEGRAM_CHAR_LIMIT = int(os.getenv("NEWS_TELEGRAM_CHAR_LIMIT", "3900"))
-
+# Wirtschaftsgewichtung
 ECON_KEYWORDS = [
-    "inflation", "cpi", "ppi", "fed", "fomc", "ecb", "ezb", "interest rate", "rate hike", "rate cut",
-    "gdp", "bip", "recession", "rezession", "unemployment", "arbeitsmarkt", "jobs", "payrolls",
-    "tariff", "zoll", "trade", "exports", "imports", "oil", "crude", "brent", "wti", "gas", "lng", "energy", "energie",
-    "earnings", "results", "guidance", "merger", "acquisition", "übernahme", "ipo", "insolvenz", "bankruptcy",
-    "bond", "anleihe", "yield", "treasury", "debt", "schulden",
-    "market", "markets", "märkte", "stocks", "aktien", "shares", "index", "dax", "s&p", "dow",
-    "usd", "dollar", "eur", "euro"
+    "inflation", "cpi", "ppi", "fed", "fomc", "ecb", "ezb", "zinsen", "zins", "interest rate",
+    "gdp", "bip", "rezession", "recession", "arbeitsmarkt", "unemployment", "jobs",
+    "zoll", "zölle", "tariff", "trade", "export", "import",
+    "öl", "oil", "gas", "lng", "energie", "energy",
+    "aktien", "stocks", "market", "märkte", "börse", "dax", "s&p", "dow",
+    "bank", "banken", "anleihe", "bond", "yield", "treasury",
+    "quartal", "earnings", "results", "guidance", "übernahme", "merger", "acquisition",
+    "insolvenz", "bankrott", "schulden", "debt"
 ]
 
 # -----------------------
@@ -89,7 +94,7 @@ class Item:
     weight: float
 
 # -----------------------
-# Utilities
+# Helpers
 # -----------------------
 def now_ts() -> int:
     return int(time.time())
@@ -112,17 +117,16 @@ def save_json(path: str, data) -> None:
     os.replace(tmp, path)
 
 def clean_text(s: str) -> str:
-    s = re.sub(r"\s+", " ", (s or "").strip())
+    s = (s or "").strip()
+    s = html.unescape(s)                 # &#x27; etc.
+    s = re.sub(r"<[^>]+>", " ", s)       # HTML tags aus RSS-Teasern entfernen
+    s = re.sub(r"\s+", " ", s).strip()
     return s
 
 def strip_control_chars(s: str) -> str:
     if not s:
         return s
     return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]", "", s)
-
-def decode_entities(s: str) -> str:
-    # RSS liefert oft &#x27; etc.
-    return html.unescape(s or "")
 
 def parse_entry_time(entry) -> Optional[int]:
     t = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
@@ -157,8 +161,7 @@ def normalize_url(url: str) -> str:
 
 def short_domain(url: str) -> str:
     try:
-        netloc = urlsplit(url).netloc.lower()
-        return netloc.replace("www.", "")
+        return urlsplit(url).netloc.lower().replace("www.", "")
     except Exception:
         return ""
 
@@ -166,74 +169,78 @@ def econ_score(text: str) -> float:
     t = (text or "").lower()
     return sum(1.0 for kw in ECON_KEYWORDS if kw in t)
 
-def is_econ(item: Item) -> bool:
-    return econ_score(f"{item.title} {item.summary}") >= 1.0
+def has_alert(text: str) -> bool:
+    t = (text or "").lower()
+    return any(k in t for k in ALERT_KEYWORDS)
 
 def quality_score(item: Item) -> float:
+    """
+    Score: Wirtschaftssignal + Recency + Quellengewicht.
+    """
     s = econ_score(f"{item.title} {item.summary}")
+
     if item.published_ts:
         age_h = max(0.0, (now_ts() - item.published_ts) / 3600.0)
         s += max(0.0, 2.0 - (age_h / 12.0))
-    s *= max(0.5, min(2.0, item.weight))
+
+    s *= max(0.6, min(2.0, item.weight))
+
+    # Alert-Boost (krasse News)
+    if has_alert(f"{item.title} {item.summary}"):
+        s += 2.5
+
     return s
 
-def berlin_time_str() -> str:
+def berlin_now() -> datetime:
     try:
         from zoneinfo import ZoneInfo
-        dt = datetime.now(ZoneInfo("Europe/Berlin"))
-        return dt.strftime("%d.%m.%Y %H:%M")
+        return datetime.now(ZoneInfo("Europe/Berlin"))
     except Exception:
-        return datetime.now().strftime("%d.%m.%Y %H:%M")
+        return datetime.now()
 
-def looks_german_strict(text: str) -> bool:
+def berlin_time_str() -> str:
+    return berlin_now().strftime("%d.%m.%Y %H:%M")
+
+def in_active_window_and_slot() -> Tuple[bool, str]:
     """
-    Striktere Heuristik: Überspringe nur, wenn sehr klar Deutsch.
-    Das verhindert, dass Englisch fälschlich nicht übersetzt wird.
+    True nur in Zeitfenster und exakt auf 2h-Slots:
+    06,08,10,12,14,16,18,20.
     """
-    t = (text or "").lower()
-    # Umlaute/ß sind starkes Signal
-    if any(ch in t for ch in ["ä", "ö", "ü", "ß"]):
-        return True
-    # mehrere deutsche Funktionswörter => starkes Signal
-    de_words = [" der ", " die ", " das ", " und ", " nicht ", " für ", " mit ", " auf ", " im ", " am ", " als ", " wird "]
-    hits = sum(1 for w in de_words if w in f" {t} ")
-    return hits >= 2
+    dt = berlin_now()
+    hour = dt.hour
+
+    if hour < ACTIVE_START_HOUR or hour >= ACTIVE_END_HOUR:
+        return False, f"Outside active window ({ACTIVE_START_HOUR}-{ACTIVE_END_HOUR})."
+
+    # Slot-Bedingung relativ zu Startstunde
+    if ((hour - ACTIVE_START_HOUR) % SEND_EVERY_N_HOURS) != 0:
+        return False, "Not a send slot."
+
+    slot_id = dt.strftime("%Y-%m-%d") + f"_{hour:02d}"
+    return True, slot_id
+
+def summarize_for_briefing(summary: str, max_chars: int) -> str:
+    s = strip_control_chars(clean_text(summary))
+    if not s:
+        return ""
+    if len(s) <= max_chars:
+        return s
+    cut = s[:max_chars].rsplit(" ", 1)[0]
+    return (cut if cut else s[:max_chars]).rstrip() + "…"
+
+def topic_signature(title: str) -> str:
+    """
+    Thema (Topic) identifizieren: Normalisierung + Tokenisierung.
+    Dadurch werden ähnliche Headlines als “gleiches Thema” behandelt.
+    """
+    t = strip_control_chars(clean_text(title)).lower()
+    t = re.sub(r"[^a-z0-9äöüß\s]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    toks = [w for w in t.split() if len(w) >= 4]
+    return " ".join(toks[:14])
 
 # -----------------------
-# LibreTranslate translation (free, with failover + caching)
-# -----------------------
-def translate_en_to_de(text: str, session: requests.Session, cache: Dict[str, str]) -> str:
-    text = strip_control_chars(clean_text(decode_entities(text)))
-    if not text:
-        return text
-
-    if TRANSLATE_ONLY_IF_NOT_GERMAN and looks_german_strict(text):
-        return text
-
-    key = sha1(text)
-    if key in cache:
-        return cache[key]
-
-    payload = {"q": text, "source": "en", "target": "de", "format": "text"}
-
-    for ep in [e for e in LIBRE_ENDPOINTS if e]:
-        try:
-            r = session.post(ep, json=payload, timeout=LIBRE_TIMEOUT, headers={"User-Agent": USER_AGENT})
-            if r.ok:
-                data = r.json()
-                translated = strip_control_chars(clean_text(decode_entities(data.get("translatedText", "")))) or text
-                cache[key] = translated
-                if LIBRE_SLEEP_BETWEEN_CALLS_MS > 0:
-                    time.sleep(LIBRE_SLEEP_BETWEEN_CALLS_MS / 1000.0)
-                return translated
-        except Exception:
-            continue
-
-    cache[key] = text
-    return text
-
-# -----------------------
-# Telegram output (HTML with short links) + fallback
+# Telegram sending (HTML + fallback)
 # -----------------------
 def _telegram_send(payload: Dict) -> Tuple[bool, str]:
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -249,7 +256,7 @@ def send_telegram_html_with_fallback(text_html: str) -> None:
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
 
-    text_html = strip_control_chars(text_html or "").strip()
+    text_html = (text_html or "").strip()
     if len(text_html) < 10:
         print("Skip send: message too short/empty.")
         return
@@ -260,16 +267,14 @@ def send_telegram_html_with_fallback(text_html: str) -> None:
         "parse_mode": "HTML",
         "disable_web_page_preview": True,
     }
-
     ok, err = _telegram_send(payload_html)
     if ok:
         return
 
-    print(f"Telegram HTML send failed; fallback to plain. Error: {err}")
-    text_plain = re.sub(r"<[^>]+>", "", text_html)
-    text_plain = strip_control_chars(text_plain).strip()
+    print(f"Telegram HTML failed; fallback to plain. Error: {err}")
+    text_plain = re.sub(r"<[^>]+>", "", text_html).strip()
     if len(text_plain) < 10:
-        print("Skip fallback send: plain message too short/empty.")
+        print("Skip fallback: plain too short.")
         return
 
     payload_plain = {
@@ -279,73 +284,83 @@ def send_telegram_html_with_fallback(text_html: str) -> None:
     }
     ok2, err2 = _telegram_send(payload_plain)
     if not ok2:
-        print(f"Telegram plain send failed: {err2}")
+        print(f"Telegram plain failed: {err2}")
 
-def build_digest_html(groups: Dict[str, List[Item]]) -> str:
+# -----------------------
+# Build message (curated topics)
+# -----------------------
+def build_message(groups: Dict[str, List[Tuple[float, Item]]]) -> str:
     header = f"<b>News Briefing</b> – {html.escape(berlin_time_str())} (DE Zeit)\n"
-    titles = {"de": "Deutschland", "us": "USA", "eu": "Europa", "world": "Welt"}
-    order = ["de", "us", "eu", "world"]
-
     parts: List[str] = [header]
-    total_links = 0
 
-    for region in order:
-        parts.append(f"\n<b>{titles[region]}</b>")
-        region_items = groups.get(region, [])
-        if not region_items:
-            parts.append("• (keine Headlines gefunden)")
+    for region in REGION_ORDER:
+        items = groups.get(region, [])
+        if not items:
             continue
 
-        for it in region_items:
-            title = strip_control_chars(clean_text(decode_entities(it.title)))
-            url = strip_control_chars(clean_text(it.url))
+        parts.append(f"\n<b>{html.escape(REGION_TITLES[region])}</b>")
+
+        for score, it in items:
+            title = strip_control_chars(clean_text(it.title))
+            teaser = summarize_for_briefing(it.summary, BRIEFING_MAX_CHARS)
             src = strip_control_chars(clean_text(it.source))
+            dom = short_domain(it.url)
 
             t = html.escape(title)
-            u = html.escape(url, quote=True)
+            u = html.escape(it.url, quote=True)
             s = html.escape(src)
-            dom = html.escape(short_domain(url))
+            d = html.escape(dom)
 
-            suffix = f"{s}" + (f" – {dom}" if dom else "")
-            parts.append(f"• <a href=\"{u}\">{t}</a> <i>({suffix})</i>")
-            total_links += 1
+            # Klickbarer Titel + Briefing
+            line1 = f"• <a href=\"{u}\">{t}</a> <i>({s}{' – ' + d if d else ''})</i>"
+            parts.append(line1)
+
+            if teaser:
+                parts.append(f"  <i>{html.escape(teaser)}</i>")
 
     text = "\n".join(parts)
     if len(text) > TELEGRAM_CHAR_LIMIT:
         text = text[:TELEGRAM_CHAR_LIMIT].rstrip() + "\n<i>…(gekürzt)</i>"
-
-    if total_links == 0:
-        return ""
     return text
 
 # -----------------------
 # Main
 # -----------------------
 def main() -> None:
-    feeds = load_json(FEEDS_PATH, {})
-    state = load_json(NEWS_STATE_PATH, {"last_digest_ts": 0, "seen": {}})
-
-    last = int(state.get("last_digest_ts", 0))
-    if last and (now_ts() - last) < (DIGEST_INTERVAL_SECONDS - 30):
-        print("Skip: already sent within interval.")
+    # Zeitfenster + Slot-Check
+    allowed, slot_id = in_active_window_and_slot()
+    if not allowed:
+        print(f"Skip: {slot_id}")
         return
 
-    seen: Dict[str, int] = state.get("seen", {})
-    items: List[Item] = []
+    feeds = load_json(FEEDS_PATH, {})
+    state = load_json(NEWS_STATE_PATH, {
+        "last_digest_ts": 0,
+        "last_slot_id": "",
+        "seen_urls": {},
+        "topics": {}
+    })
+
+    # Slot-Dedupe: innerhalb eines Slots niemals doppelt senden
+    if state.get("last_slot_id") == slot_id:
+        print("Skip: already sent in this slot.")
+        return
+
+    seen_urls: Dict[str, int] = state.get("seen_urls", {})
+    topics: Dict[str, Dict] = state.get("topics", {})  # signature -> metadata
 
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
 
-    # 1) Collect
+    # 1) Collect items
+    collected: List[Item] = []
     for region, flist in feeds.items():
-        if region not in REGION_TOTAL:
+        if region not in REGION_ORDER:
             continue
-
         for f in flist:
             name = f.get("name", "Source")
             url = f.get("url")
             weight = float(f.get("weight", 1.0))
-
             if not url:
                 continue
 
@@ -357,10 +372,10 @@ def main() -> None:
                 print(f"Feed error [{region}] {name}: {e}")
                 continue
 
-            for entry in parsed.entries[:60]:
-                title = strip_control_chars(clean_text(decode_entities(getattr(entry, "title", "") or "")))
+            for entry in parsed.entries[:80]:
+                title = strip_control_chars(clean_text(getattr(entry, "title", "") or ""))
                 link = strip_control_chars(clean_text(getattr(entry, "link", "") or ""))
-                summary = strip_control_chars(clean_text(decode_entities(getattr(entry, "summary", "") or "")))
+                summary = strip_control_chars(clean_text(getattr(entry, "summary", "") or ""))
 
                 if not title or not link:
                     continue
@@ -370,11 +385,11 @@ def main() -> None:
                     continue
 
                 nurl = normalize_url(link)
-                h = sha1(nurl)
-                if h in seen:
+                url_hash = sha1(nurl)
+                if url_hash in seen_urls:
                     continue
 
-                items.append(Item(
+                collected.append(Item(
                     region=region,
                     source=name,
                     title=title,
@@ -384,74 +399,119 @@ def main() -> None:
                     weight=weight
                 ))
 
-    if not items:
-        print("No new items collected (feeds empty or all seen).")
+    if not collected:
+        print("No new items collected.")
         return
 
-    # 2) Translate to German for selected regions (default: us, eu, world)
-    translate_cache: Dict[str, str] = {}
-    for it in items:
-        if it.region in TRANSLATE_REGIONS:
-            it.title = translate_en_to_de(it.title, session=session, cache=translate_cache)
-            if TRANSLATE_SUMMARY and it.summary:
-                it.summary = translate_en_to_de(it.summary, session=session, cache=translate_cache)
-
-    # 3) Score & sort
-    scored: List[Tuple[float, Item]] = [(quality_score(it), it) for it in items]
-    scored.sort(key=lambda x: x[0], reverse=True)
-
-    # 4) Buckets
-    econ_bucket: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
-    norm_bucket: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
-
-    for score, it in scored:
+    # 2) Score & topic-dedupe: pro Topic nur das beste Item behalten
+    best_by_topic: Dict[str, Tuple[float, Item]] = {}
+    for it in collected:
+        score = quality_score(it)
         if score < MIN_SCORE.get(it.region, 0.0):
             continue
-        (econ_bucket if is_econ(it) else norm_bucket)[it.region].append(it)
 
-    # 5) Select per region
-    groups: Dict[str, List[Item]] = {k: [] for k in REGION_TOTAL}
-    for region, total in REGION_TOTAL.items():
-        econ_target = int(round(total * REGION_ECON_SHARE[region]))
-        sel: List[Item] = []
-        sel.extend(econ_bucket[region][:econ_target])
+        sig = topic_signature(it.title)
+        if not sig:
+            continue
 
-        remaining = total - len(sel)
-        if remaining > 0:
-            sel.extend(norm_bucket[region][:remaining])
+        prev = best_by_topic.get(sig)
+        if (prev is None) or (score > prev[0]):
+            best_by_topic[sig] = (score, it)
 
-        if len(sel) < total:
-            need = total - len(sel)
-            sel.extend(econ_bucket[region][len(sel):len(sel) + need])
-        if len(sel) < total:
-            need = total - len(sel)
-            sel.extend(norm_bucket[region][len(sel):len(sel) + need])
-
-        groups[region] = sel[:total]
-
-    if not any(groups.values()):
-        print("No items selected after scoring/filtering.")
+    if not best_by_topic:
+        print("No items after scoring/filtering.")
         return
 
-    # 6) Send Telegram
-    msg = build_digest_html(groups)
-    if not msg:
-        print("Skip send: message would have no links/content.")
+    # 3) Decide if a topic is allowed to be sent (avoid repeats unless major update)
+    def is_major_update(sig: str, score: float, it: Item) -> bool:
+        meta = topics.get(sig)
+        if not meta:
+            return True  # nie gesendet -> ok
+
+        last_sent_ts = int(meta.get("last_sent_ts", 0))
+        last_score = float(meta.get("last_score", 0.0))
+        last_pub = int(meta.get("last_pub_ts", 0))
+
+        # Alert-Wörter -> immer durchlassen
+        if has_alert(f"{it.title} {it.summary}"):
+            return True
+
+        # deutlich neuer als letzter Stand?
+        pub_ts = it.published_ts or 0
+        min_gap_ok = (now_ts() - last_sent_ts) >= (MAJOR_UPDATE_MIN_HOURS * 3600)
+
+        newer_ok = (pub_ts > (last_pub + 3600))  # mind. 1h neuer publiziert
+        score_jump_ok = (score - last_score) >= MAJOR_UPDATE_SCORE_DELTA
+
+        return min_gap_ok and (newer_ok or score_jump_ok)
+
+    # 4) Group by region and select top 2–4 topics per region
+    per_region: Dict[str, List[Tuple[float, Item, str]]] = {r: [] for r in REGION_ORDER}
+    for sig, (score, it) in best_by_topic.items():
+        if is_major_update(sig, score, it):
+            per_region[it.region].append((score, it, sig))
+
+    groups_final: Dict[str, List[Tuple[float, Item]]] = {}
+    topics_sent: List[Tuple[str, float, Item]] = []
+
+    for region in REGION_ORDER:
+        candidates = per_region.get(region, [])
+        candidates.sort(key=lambda x: x[0], reverse=True)
+
+        chosen: List[Tuple[float, Item]] = []
+        chosen_sigs: List[str] = []
+
+        for score, it, sig in candidates:
+            if len(chosen) >= MAX_TOPICS_PER_REGION:
+                break
+            chosen.append((score, it))
+            chosen_sigs.append(sig)
+
+        if len(chosen) < MIN_TOPICS_PER_REGION and not ALLOW_FEWER_THAN_MIN:
+            continue
+
+        if chosen:
+            groups_final[region] = chosen
+            for (score, it), sig in zip(chosen, chosen_sigs):
+                topics_sent.append((sig, score, it))
+
+    if not groups_final:
+        print("No topics selected (all repeats, no major updates).")
         return
 
+    # 5) Build + Send
+    msg = build_message(groups_final)
     send_telegram_html_with_fallback(msg)
 
-    # 7) Update state
+    # 6) Update state
     ts = now_ts()
-    for region_items in groups.values():
-        for it in region_items:
-            seen[sha1(it.url)] = ts
 
+    # URLs als gesehen markieren
+    for _, it in [x for region_items in groups_final.values() for x in region_items]:
+        seen_urls[sha1(it.url)] = ts
+
+    # Topic-Metadaten aktualisieren
+    for sig, score, it in topics_sent:
+        topics[sig] = {
+            "last_sent_ts": ts,
+            "last_score": score,
+            "last_pub_ts": int(it.published_ts or 0),
+            "last_url_hash": sha1(it.url),
+            "last_title": clean_text(it.title)[:200]
+        }
+
+    # TTL Cleanup
     ttl = NEWS_TTL_HOURS * 3600
-    seen = {k: v for k, v in seen.items() if (ts - int(v)) <= ttl}
+    seen_urls = {k: v for k, v in seen_urls.items() if (ts - int(v)) <= ttl}
+
+    # optional: topics sehr lange behalten (damit Wiederholungen vermieden werden)
+    topics_ttl = max(ttl, 14 * 24 * 3600)  # 14 Tage
+    topics = {k: v for k, v in topics.items() if (ts - int(v.get("last_sent_ts", 0))) <= topics_ttl}
 
     state["last_digest_ts"] = ts
-    state["seen"] = seen
+    state["last_slot_id"] = slot_id
+    state["seen_urls"] = seen_urls
+    state["topics"] = topics
     save_json(NEWS_STATE_PATH, state)
 
     print("Digest sent + state updated.")
