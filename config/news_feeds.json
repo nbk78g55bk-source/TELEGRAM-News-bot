@@ -3,7 +3,7 @@
     {
       "name": "Tagesschau – Wirtschaft",
       "url": "https://www.tagesschau.de/wirtschaft/index~rss2.xml",
-      "weight": 1.2
+      "weight": 1.3
     },
     {
       "name": "Tagesschau – Inland",
@@ -11,72 +11,47 @@
       "weight": 1.0
     },
     {
+      "name": "Handelsblatt – Wirtschaft",
+      "url": "https://www.handelsblatt.com/contentexport/feed/wirtschaft",
+      "weight": 1.4
+    },
+    {
       "name": "ZEIT ONLINE – Wirtschaft",
       "url": "https://newsfeed.zeit.de/wirtschaft/index",
       "weight": 1.2
-    },
-    {
-      "name": "Handelsblatt – Unternehmen",
-      "url": "https://www.handelsblatt.com/contentexport/feed/unternehmen",
-      "weight": 1.3
-    },
-    {
-      "name": "Handelsblatt – Finanzen",
-      "url": "https://www.handelsblatt.com/contentexport/feed/finanzen",
-      "weight": 1.3
-    },
-    {
-      "name": "Bundesbank – Presse",
-      "url": "https://www.bundesbank.de/rss/pressenotizen/pressenotizen.rss",
-      "weight": 1.1
     }
   ],
   "us": [
     {
-      "name": "Reuters – Business",
-      "url": "https://feeds.reuters.com/reuters/businessNews",
-      "weight": 1.5
+      "name": "AP News – Business",
+      "url": "https://apnews.com/rss/business",
+      "weight": 1.4
     },
     {
-      "name": "Reuters – World",
-      "url": "https://feeds.reuters.com/reuters/worldNews",
-      "weight": 1.2
-    },
-    {
-      "name": "NYTimes – Business",
-      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
-      "weight": 1.3
-    },
-    {
-      "name": "CNBC – Top News",
-      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "name": "AP News – US News",
+      "url": "https://apnews.com/rss/us-news",
       "weight": 1.2
     },
     {
       "name": "CNBC – Economy",
       "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
-      "weight": 1.2
+      "weight": 1.3
     },
     {
-      "name": "Federal Reserve – Press Releases",
-      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "name": "CNBC – Top News",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
       "weight": 1.1
     }
   ],
   "eu": [
     {
-      "name": "ECB – Press Releases",
-      "url": "https://www.ecb.europa.eu/press/pressconf/html/index.en.rss",
-      "weight": 1.2
-    },
-    {
-      "name": "ECB – Publications",
-      "url": "https://www.ecb.europa.eu/pub/rss/en.html",
+      "name": "Politico Europe",
+      "url": "https://www.politico.eu/feed/",
       "weight": 1.1
     },
     {
-      "name": "Politico Europe",
-      "url": "https://www.politico.eu/feed/",
+      "name": "EU Observer",
+      "url": "https://euobserver.com/rss.xml",
       "weight": 1.0
     }
   ],
@@ -84,17 +59,17 @@
     {
       "name": "BBC – Business",
       "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
-      "weight": 1.1
-    },
-    {
-      "name": "Financial Times – World",
-      "url": "https://www.ft.com/rss/world",
       "weight": 1.2
     },
     {
-      "name": "IMF – News",
-      "url": "https://www.imf.org/external/rss/feeds.aspx?rss=News",
+      "name": "BBC – World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
       "weight": 1.1
+    },
+    {
+      "name": "Al Jazeera – Economy",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "weight": 1.0
     }
   ]
 }
