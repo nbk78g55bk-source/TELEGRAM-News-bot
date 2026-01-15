@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768460496,
+  "last_digest_ts": 1768485250,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-15_08",
+  "last_slot_id": "2026-01-15_14",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -62,7 +62,15 @@
     "06bb3ac8ccb10413a73371f3364e84118be3f703": 1768460496,
     "8186b5867669c166db35cf6900ab2a8c90fd192b": 1768460496,
     "e6affb8867948e0cbf72470aa779be9b50836b80": 1768460496,
-    "4666fd7af8f8c8f2e4766136e089102aa018281a": 1768460496
+    "4666fd7af8f8c8f2e4766136e089102aa018281a": 1768460496,
+    "52bf4be10e9f3bc40d429b27cfa23fa69162e258": 1768485250,
+    "edd542d5b9ccb26fa0e19a6213c6cf96753eac91": 1768485250,
+    "923f4f2f506bc5c70431277349de938e7d21f75e": 1768485250,
+    "f32047b5af496ea8f15bfebbf3f9fd8f6d86f52e": 1768485250,
+    "dd64f006feb0d3467c36f9f73417d25a63c15c3e": 1768485250,
+    "818d5d4a382a9d773cf84ec6a860e22048a74093": 1768485250,
+    "eb3fd9190f14f5da3d0bb28280b63d694b2b6b8f": 1768485250,
+    "3ffad6e2ebcc51487eca8615ff2d2edb0f4b2380": 1768485250
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -407,6 +415,62 @@
       "last_pub_ts": 1768457501,
       "last_url_hash": "4666fd7af8f8c8f2e4766136e089102aa018281a",
       "last_title": "Opfer des Crans-Montana-Brands bekommen finanzielle Soforthilfe"
+    },
+    "tagesgeld bringt kaum zinsen sind alternativen": {
+      "last_sent_ts": 1768485250,
+      "last_score": 9.200916666666668,
+      "last_pub_ts": 1768467282,
+      "last_url_hash": "52bf4be10e9f3bc40d429b27cfa23fa69162e258",
+      "last_title": "Tagesgeld bringt kaum Zinsen: Das sind die Alternativen"
+    },
+    "neuer export rekord china größter gewinner trump zöllen": {
+      "last_sent_ts": 1768485250,
+      "last_score": 7.605298611111111,
+      "last_pub_ts": 1768469748,
+      "last_url_hash": "edd542d5b9ccb26fa0e19a6213c6cf96753eac91",
+      "last_title": "Neuer Export-Rekord - China ist größter Gewinner von Trump-Zöllen"
+    },
+    "galeria eigentümer insolvenz betroffen kaufhaus insolvent": {
+      "last_sent_ts": 1768485250,
+      "last_score": 7.085861111111111,
+      "last_pub_ts": 1768477540,
+      "last_url_hash": "923f4f2f506bc5c70431277349de938e7d21f75e",
+      "last_title": "Galeria-Eigentümer von Insolvenz betroffen: US-Kaufhaus ist insolvent"
+    },
+    "trump verhängt neue zölle spezielle hochleistungschips": {
+      "last_sent_ts": 1768485250,
+      "last_score": 6.874722222222222,
+      "last_pub_ts": 1768469939,
+      "last_url_hash": "f32047b5af496ea8f15bfebbf3f9fd8f6d86f52e",
+      "last_title": "Trump verhängt neue Zölle auf spezielle Hochleistungschips"
+    },
+    "deutsche soldaten erkundungsmission grönland": {
+      "last_sent_ts": 1768485250,
+      "last_score": 2.392611111111111,
+      "last_pub_ts": 1768484983,
+      "last_url_hash": "dd64f006feb0d3467c36f9f73417d25a63c15c3e",
+      "last_title": "Deutsche Soldaten auf dem Weg zu Erkundungsmission in Grönland"
+    },
+    "wegen eines medizinischen problems crew vorzeitig zurück": {
+      "last_sent_ts": 1768485250,
+      "last_score": 2.300333333333333,
+      "last_pub_ts": 1768481661,
+      "last_url_hash": "818d5d4a382a9d773cf84ec6a860e22048a74093",
+      "last_title": "Wegen eines medizinischen Problems ist die ISS-Crew vorzeitig zurück"
+    },
+    "irreguläre migration nahm 2025 deutlich": {
+      "last_sent_ts": 1768485250,
+      "last_score": 2.0645,
+      "last_pub_ts": 1768473171,
+      "last_url_hash": "eb3fd9190f14f5da3d0bb28280b63d694b2b6b8f",
+      "last_title": "Irreguläre Migration in die EU nahm 2025 deutlich ab"
+    },
+    "venezolaner spanien hoffnung regimewechsel aber wann": {
+      "last_sent_ts": 1768485250,
+      "last_score": 2.056222222222222,
+      "last_pub_ts": 1768472873,
+      "last_url_hash": "3ffad6e2ebcc51487eca8615ff2d2edb0f4b2380",
+      "last_title": "Venezolaner in Spanien: Hoffnung auf Regimewechsel - aber wann?"
     }
   }
 }
