@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768485250,
+  "last_digest_ts": 1768499489,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-15_14",
+  "last_slot_id": "2026-01-15_18",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -70,7 +70,15 @@
     "dd64f006feb0d3467c36f9f73417d25a63c15c3e": 1768485250,
     "818d5d4a382a9d773cf84ec6a860e22048a74093": 1768485250,
     "eb3fd9190f14f5da3d0bb28280b63d694b2b6b8f": 1768485250,
-    "3ffad6e2ebcc51487eca8615ff2d2edb0f4b2380": 1768485250
+    "3ffad6e2ebcc51487eca8615ff2d2edb0f4b2380": 1768485250,
+    "59ef7b7e52ac8910d45e4bc1e1bf50009e7f8cac": 1768499489,
+    "5095d1961139af5c129bba5f1cb8ac7323ef5dda": 1768499489,
+    "d3fe928b633d5e6047a58e7d905347b5178eb129": 1768499489,
+    "b5bc41dac85ed725d15513cb14757eab408782b8": 1768499489,
+    "4dca10c14cec940591c8f7c4c5f63f3813936b16": 1768499489,
+    "6d7b603a3047b8de7691f152c0613659efdf4bef": 1768499489,
+    "eb358db1b89a20c113e8ede12f82cfca31b9eac3": 1768499489,
+    "6bd4578519a4e42606c9362c09e8a527454caab0": 1768499489
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -471,6 +479,62 @@
       "last_pub_ts": 1768472873,
       "last_url_hash": "3ffad6e2ebcc51487eca8615ff2d2edb0f4b2380",
       "last_title": "Venezolaner in Spanien: Hoffnung auf Regimewechsel - aber wann?"
+    },
+    "trump gegen powell präsident politik persönlichem vermengt": {
+      "last_sent_ts": 1768499489,
+      "last_score": 5.436618055555556,
+      "last_pub_ts": 1768485217,
+      "last_url_hash": "59ef7b7e52ac8910d45e4bc1e1bf50009e7f8cac",
+      "last_title": "Trump gegen Powell: Wie der US-Präsident Politik mit Persönlichem vermengt"
+    },
+    "stillstand stellenabbau insolvenzen reiche papier zeigt wahres ausmaß chemie krise": {
+      "last_sent_ts": 1768499489,
+      "last_score": 5.361273148148149,
+      "last_pub_ts": 1768482258,
+      "last_url_hash": "5095d1961139af5c129bba5f1cb8ac7323ef5dda",
+      "last_title": "Stillstand, Stellenabbau, Insolvenzen - Reiche-Papier zeigt wahres Ausmaß der Chemie-Krise"
+    },
+    "marktbericht bleibt allzeithoch": {
+      "last_sent_ts": 1768499489,
+      "last_score": 4.780583333333333,
+      "last_pub_ts": 1768498789,
+      "last_url_hash": "d3fe928b633d5e6047a58e7d905347b5178eb129",
+      "last_title": "Marktbericht: DAX bleibt nah am Allzeithoch"
+    },
+    "ursache noch unklar mehrere explosionen lösen großbrand utrecht": {
+      "last_sent_ts": 1768499489,
+      "last_score": 4.7,
+      "last_pub_ts": 1768502663,
+      "last_url_hash": "b5bc41dac85ed725d15513cb14757eab408782b8",
+      "last_title": "Ursache noch unklar - Mehrere Explosionen lösen Großbrand in Utrecht aus"
+    },
+    "neue sanktionen gegen irans führung": {
+      "last_sent_ts": 1768499489,
+      "last_score": 6.055,
+      "last_pub_ts": 1768497868,
+      "last_url_hash": "4dca10c14cec940591c8f7c4c5f63f3813936b16",
+      "last_title": "Neue US-Sanktionen gegen Irans Führung"
+    },
+    "nach beratungen washington vier szenarien grönland": {
+      "last_sent_ts": 1768499489,
+      "last_score": 4.651361111111111,
+      "last_pub_ts": 1768490537,
+      "last_url_hash": "6d7b603a3047b8de7691f152c0613659efdf4bef",
+      "last_title": "Nach Beratungen in Washington: Vier Szenarien für Grönland"
+    },
+    "opposition venezuela nobelpreisträgerin machado washington": {
+      "last_sent_ts": 1768499489,
+      "last_score": 1.653722222222222,
+      "last_pub_ts": 1768472622,
+      "last_url_hash": "eb358db1b89a20c113e8ede12f82cfca31b9eac3",
+      "last_title": "Opposition in Venezuela: Nobelpreisträgerin Machado in Washington"
+    },
+    "einigung übergangsverwaltung gazastreifen": {
+      "last_sent_ts": 1768499489,
+      "last_score": 1.4274999999999998,
+      "last_pub_ts": 1768464478,
+      "last_url_hash": "6bd4578519a4e42606c9362c09e8a527454caab0",
+      "last_title": "Einigung auf Übergangsverwaltung im Gazastreifen"
     }
   }
 }
