@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768499489,
+  "last_digest_ts": 1768504501,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-15_18",
+  "last_slot_id": "2026-01-15_20",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -78,7 +78,11 @@
     "4dca10c14cec940591c8f7c4c5f63f3813936b16": 1768499489,
     "6d7b603a3047b8de7691f152c0613659efdf4bef": 1768499489,
     "eb358db1b89a20c113e8ede12f82cfca31b9eac3": 1768499489,
-    "6bd4578519a4e42606c9362c09e8a527454caab0": 1768499489
+    "6bd4578519a4e42606c9362c09e8a527454caab0": 1768499489,
+    "f60bb001c41df49a097e7d7d04d1168f85c425f3": 1768504501,
+    "0f0a24b21e397a533a6af321c783d79c25489761": 1768504501,
+    "693b3c1477f52d3dcee63db7a3e17a73ec2748ef": 1768504501,
+    "7d944dc465cdc169f96dc52f1cb368246d329231": 1768504501
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -535,6 +539,34 @@
       "last_pub_ts": 1768464478,
       "last_url_hash": "6bd4578519a4e42606c9362c09e8a527454caab0",
       "last_title": "Einigung auf Übergangsverwaltung im Gazastreifen"
+    },
+    "schock brandenburg crash bundesstraße endet tödlich wölfe": {
+      "last_sent_ts": 1768504501,
+      "last_score": 5.764631944444445,
+      "last_pub_ts": 1768503111,
+      "last_url_hash": "f60bb001c41df49a097e7d7d04d1168f85c425f3",
+      "last_title": "Schock in Brandenburg - Crash auf Bundesstraße endet tödlich für Wölfe"
+    },
+    "ukraine krieg putin kritisiert recht stärkeren politik": {
+      "last_sent_ts": 1768504501,
+      "last_score": 4.664275462962963,
+      "last_pub_ts": 1768503097,
+      "last_url_hash": "0f0a24b21e397a533a6af321c783d79c25489761",
+      "last_title": "Ukraine-Krieg: Putin kritisiert Recht des Stärkeren in Politik"
+    },
+    "lage krisenstadt explosiv schickt trump jetzt armee nach minneapolis": {
+      "last_sent_ts": 1768504501,
+      "last_score": 4.66338425925926,
+      "last_pub_ts": 1768503062,
+      "last_url_hash": "693b3c1477f52d3dcee63db7a3e17a73ec2748ef",
+      "last_title": "Lage in der Krisenstadt explosiv - Schickt Trump jetzt die Armee nach Minneapolis?"
+    },
+    "ukraine krieg russland setzt tödlichere angriffsdrohnen modelle": {
+      "last_sent_ts": 1768504501,
+      "last_score": 4.481604166666667,
+      "last_pub_ts": 1768495923,
+      "last_url_hash": "7d944dc465cdc169f96dc52f1cb368246d329231",
+      "last_title": "Ukraine-Krieg: Russland setzt auf tödlichere Angriffsdrohnen-Modelle"
     }
   }
 }
