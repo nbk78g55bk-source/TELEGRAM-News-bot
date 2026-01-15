@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768417209,
+  "last_digest_ts": 1768453409,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-14_20",
+  "last_slot_id": "2026-01-15_06",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -45,7 +45,15 @@
     "c10a5025000356233157d75b35c86d61f3c9afd7": 1768417209,
     "11120422cc4a1b5545170d317c515254b7c39aa5": 1768417209,
     "59cc2c669ae4e62891d6d67e52d2729a0e058b11": 1768417209,
-    "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352": 1768417209
+    "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352": 1768417209,
+    "66820cd7d378dfc498d3331282bd3a08146e19d1": 1768453409,
+    "586565868cf5bde9a734c2310d8dd57d60b6ac61": 1768453409,
+    "43b7880b31d8bd9fe977624b53d652b577f6d443": 1768453409,
+    "9f1fe4fd5107baa10d6755d5a8b5866c606f2ebd": 1768453409,
+    "4351016815756e706015f2f65dbcc16a44859299": 1768453409,
+    "fee6551a1682e8342258d073b6e3d5bbff23c6c8": 1768453409,
+    "021460cb92ee169baa4fd77e2f3023804cff13c3": 1768453409,
+    "c666a641008eeeba9b0a3fb961acac2ab12a8a23": 1768453409
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -271,6 +279,62 @@
       "last_pub_ts": 1768386597,
       "last_url_hash": "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352",
       "last_title": "Grönland-Gipfel: Außenminister von Dänemark und USA treffen sich"
+    },
+    "tagesgeld zinsen aktuell prozent diese bank zahlt meisten": {
+      "last_sent_ts": 1768453409,
+      "last_score": 9.54525,
+      "last_pub_ts": 1768447837,
+      "last_url_hash": "66820cd7d378dfc498d3331282bd3a08146e19d1",
+      "last_title": "Tagesgeld-Zinsen aktuell: Bis zu 3,2 Prozent – diese Bank zahlt am meisten"
+    },
+    "insolvenz stellen fallen führungskräfte müssen auch gehen": {
+      "last_sent_ts": 1768453409,
+      "last_score": 6.007083333333334,
+      "last_pub_ts": 1768450063,
+      "last_url_hash": "586565868cf5bde9a734c2310d8dd57d60b6ac61",
+      "last_title": "KTM-Insolvenz: 500 Stellen fallen weg – Führungskräfte müssen auch gehen"
+    },
+    "ukraine krieg selenskyj kritisiert klitschko wegen notlage kiew": {
+      "last_sent_ts": 1768453409,
+      "last_score": 4.638914351851852,
+      "last_pub_ts": 1768451009,
+      "last_url_hash": "43b7880b31d8bd9fe977624b53d652b577f6d443",
+      "last_title": "Ukraine-Krieg: Selenskyj kritisiert Klitschko wegen Notlage in Kiew"
+    },
+    "iran dementiert hinrichtungspläne westen schränkt reisen": {
+      "last_sent_ts": 1768453409,
+      "last_score": 4.603979166666667,
+      "last_pub_ts": 1768449637,
+      "last_url_hash": "9f1fe4fd5107baa10d6755d5a8b5866c606f2ebd",
+      "last_title": "Iran dementiert Hinrichtungspläne – Westen schränkt Reisen ein"
+    },
+    "dänemark keine einigung grönland krisengespräch": {
+      "last_sent_ts": 1768453409,
+      "last_score": 4.047027777777777,
+      "last_pub_ts": 1768422701,
+      "last_url_hash": "4351016815756e706015f2f65dbcc16a44859299",
+      "last_title": "Dänemark: Keine Einigung mit USA bei Grönland-Krisengespräch"
+    },
+    "ziehen hunderte soldaten militärstützpunkt katar": {
+      "last_sent_ts": 1768453409,
+      "last_score": 3.974861111111111,
+      "last_pub_ts": 1768420103,
+      "last_url_hash": "fee6551a1682e8342258d073b6e3d5bbff23c6c8",
+      "last_title": "USA ziehen Hunderte Soldaten von Militärstützpunkt in Katar ab"
+    },
+    "dänemark grönland bilden eine arbeitsgruppe": {
+      "last_sent_ts": 1768453409,
+      "last_score": 3.087555555555556,
+      "last_pub_ts": 1768434960,
+      "last_url_hash": "021460cb92ee169baa4fd77e2f3023804cff13c3",
+      "last_title": "Dänemark, Grönland und USA bilden eine Arbeitsgruppe"
+    },
+    "chatbot grok soll keine nacktbilder mehr erzeugen": {
+      "last_sent_ts": 1768453409,
+      "last_score": 2.3609166666666668,
+      "last_pub_ts": 1768452001,
+      "last_url_hash": "c666a641008eeeba9b0a3fb961acac2ab12a8a23",
+      "last_title": "Chatbot Grok soll keine KI-Nacktbilder mehr erzeugen"
     }
   }
 }
