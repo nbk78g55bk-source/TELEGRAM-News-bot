@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768453409,
+  "last_digest_ts": 1768460496,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-15_06",
+  "last_slot_id": "2026-01-15_08",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -53,7 +53,16 @@
     "4351016815756e706015f2f65dbcc16a44859299": 1768453409,
     "fee6551a1682e8342258d073b6e3d5bbff23c6c8": 1768453409,
     "021460cb92ee169baa4fd77e2f3023804cff13c3": 1768453409,
-    "c666a641008eeeba9b0a3fb961acac2ab12a8a23": 1768453409
+    "c666a641008eeeba9b0a3fb961acac2ab12a8a23": 1768453409,
+    "f7adb230aed43c32b542c3304bf0331384d32149": 1768460496,
+    "747327dc2f779453b04cbf9a4457c0472c0659f3": 1768460496,
+    "f2e69b1ef4101395248136edafc857363fdd367b": 1768460496,
+    "700414ad7b6ca6477b035ce01d41f6220ac656a5": 1768460496,
+    "82df59a61cb3265b6df0f28ed09b8131d7fd5a3d": 1768460496,
+    "06bb3ac8ccb10413a73371f3364e84118be3f703": 1768460496,
+    "8186b5867669c166db35cf6900ab2a8c90fd192b": 1768460496,
+    "e6affb8867948e0cbf72470aa779be9b50836b80": 1768460496,
+    "4666fd7af8f8c8f2e4766136e089102aa018281a": 1768460496
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -335,6 +344,69 @@
       "last_pub_ts": 1768452001,
       "last_url_hash": "c666a641008eeeba9b0a3fb961acac2ab12a8a23",
       "last_title": "Chatbot Grok soll keine KI-Nacktbilder mehr erzeugen"
+    },
+    "keine lösung beim insel gipfel dänen außenminister trump will grönland erobern": {
+      "last_sent_ts": 1768460496,
+      "last_score": 4.699770833333334,
+      "last_pub_ts": 1768460486,
+      "last_url_hash": "f7adb230aed43c32b542c3304bf0331384d32149",
+      "last_title": "Keine Lösung beim Insel-Gipfel! - Dänen-Außenminister: Trump will Grönland „erobern“"
+    },
+    "ukraine news selenskyj kritisiert klitschko wegen notlage kiew": {
+      "last_sent_ts": 1768460496,
+      "last_score": 4.547502314814815,
+      "last_pub_ts": 1768454506,
+      "last_url_hash": "747327dc2f779453b04cbf9a4457c0472c0659f3",
+      "last_title": "Ukraine-News: Selenskyj kritisiert Klitschko wegen Notlage in Kiew"
+    },
+    "donald trump beharrt grönland wird sich etwas finden": {
+      "last_sent_ts": 1768460496,
+      "last_score": 4.1630625000000006,
+      "last_pub_ts": 1768439408,
+      "last_url_hash": "f2e69b1ef4101395248136edafc857363fdd367b",
+      "last_title": "USA: Donald Trump beharrt auf Grönland – \"Es wird sich etwas finden\""
+    },
+    "russland name baumärkte verschwindet markt": {
+      "last_sent_ts": 1768460496,
+      "last_score": 3.3119166666666664,
+      "last_pub_ts": 1768450124,
+      "last_url_hash": "700414ad7b6ca6477b035ce01d41f6220ac656a5",
+      "last_title": "Russland: Name der Baumärkte von Obi verschwindet vom Markt"
+    },
+    "uganda wählt langzeitherrscher sucht kontakt jugend": {
+      "last_sent_ts": 1768460496,
+      "last_score": 2.337638888888889,
+      "last_pub_ts": 1768458250,
+      "last_url_hash": "82df59a61cb3265b6df0f28ed09b8131d7fd5a3d",
+      "last_title": "Uganda wählt: Der Langzeitherrscher sucht den Kontakt zur Jugend"
+    },
+    "11km podcast regime iran ende": {
+      "last_sent_ts": 1768460496,
+      "last_score": 2.2031666666666667,
+      "last_pub_ts": 1768453409,
+      "last_url_hash": "06bb3ac8ccb10413a73371f3364e84118be3f703",
+      "last_title": "11KM-Podcast: Ist das Regime im Iran am Ende?"
+    },
+    "drückt bremse noch tempo zentrum": {
+      "last_sent_ts": 1768460496,
+      "last_score": 2.046,
+      "last_pub_ts": 1768447751,
+      "last_url_hash": "8186b5867669c166db35cf6900ab2a8c90fd192b",
+      "last_title": "Rom drückt auf die Bremse: Nur noch Tempo 30 im Zentrum"
+    },
+    "iranische regierung weist hinrichtungspläne zurück": {
+      "last_sent_ts": 1768460496,
+      "last_score": 2.0107222222222223,
+      "last_pub_ts": 1768446481,
+      "last_url_hash": "e6affb8867948e0cbf72470aa779be9b50836b80",
+      "last_title": "Iranische Regierung weist Hinrichtungspläne zurück"
+    },
+    "opfer crans montana brands bekommen finanzielle soforthilfe": {
+      "last_sent_ts": 1768460496,
+      "last_score": 2.3168333333333333,
+      "last_pub_ts": 1768457501,
+      "last_url_hash": "4666fd7af8f8c8f2e4766136e089102aa018281a",
+      "last_title": "Opfer des Crans-Montana-Brands bekommen finanzielle Soforthilfe"
     }
   }
 }
