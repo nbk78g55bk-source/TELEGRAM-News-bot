@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768571512,
+  "last_digest_ts": 1768590008,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-16_14",
+  "last_slot_id": "2026-01-16_20",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -105,7 +105,15 @@
     "0255cf9865312e3f6277e50ffecb6a36e1638910": 1768571512,
     "80d911a2bdaa62c13c5b9307779448d6b2121c17": 1768571512,
     "dba2f82c9db038c37ee67747a6aa9bd23a849913": 1768571512,
-    "2f6f828d47ea3e11a765a38e9c966f0d142b3403": 1768571512
+    "2f6f828d47ea3e11a765a38e9c966f0d142b3403": 1768571512,
+    "dfea735a0684c7c163dc5d9be2ede1f04fa8fe44": 1768590008,
+    "83cb3ac362be79b1ecbdebb4e61533fe47c8e790": 1768590008,
+    "65f83e8cb85c3835deb6fbe107f1e1fccc6760b8": 1768590008,
+    "bc8bf04042472c00cb6940f958033f559ae820d5": 1768590008,
+    "d406ab0cd65f6d042a917bfbe3b8232589a356f3": 1768590008,
+    "d97b693de3dd00186331449ffa93d423782d74fd": 1768590008,
+    "abf7d5f25d864086dd9f6f646d947f4329ae64cd": 1768590008,
+    "79f4288f1bda4187093bdbc6e66f199581e4b469": 1768590008
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -751,6 +759,62 @@
       "last_pub_ts": 1768556170,
       "last_url_hash": "2f6f828d47ea3e11a765a38e9c966f0d142b3403",
       "last_title": "Überschwemmungen bei Nationalpark in Südafrika: Mindestens zehn Tote"
+    },
+    "politik trump droht gegnern grönland plänen strafzöllen": {
+      "last_sent_ts": 1768590008,
+      "last_score": 6.856509259259259,
+      "last_pub_ts": 1768588300,
+      "last_url_hash": "dfea735a0684c7c163dc5d9be2ede1f04fa8fe44",
+      "last_title": "US-Politik | Trump droht Gegnern von Grönland-Plänen mit Strafzöllen"
+    },
+    "grönland zoff trump droht gegnern seiner pläne zöllen": {
+      "last_sent_ts": 1768590008,
+      "last_score": 6.724763888888889,
+      "last_pub_ts": 1768583126,
+      "last_url_hash": "83cb3ac362be79b1ecbdebb4e61533fe47c8e790",
+      "last_title": "Grönland-Zoff - Trump droht Gegnern seiner Pläne mit Zöllen"
+    },
+    "grüne zerstörungspolitik ganze arbeit geleistet krise deutschen chemieindustrie viel schlimmer gedacht": {
+      "last_sent_ts": 1768590008,
+      "last_score": 5.7088425925925925,
+      "last_pub_ts": 1768586428,
+      "last_url_hash": "65f83e8cb85c3835deb6fbe107f1e1fccc6760b8",
+      "last_title": "Die grüne Zerstörungspolitik hat ganze Arbeit geleistet: Krise der deutschen Chemieindustrie viel schlimmer als gedacht"
+    },
+    "insolvenz revo hotelgruppe mitarbeiter betroffen": {
+      "last_sent_ts": 1768590008,
+      "last_score": 5.64025,
+      "last_pub_ts": 1768573457,
+      "last_url_hash": "bc8bf04042472c00cb6940f958033f559ae820d5",
+      "last_title": "Insolvenz: Revo-Hotelgruppe vor dem Aus – 5.550 Mitarbeiter betroffen"
+    },
+    "trump droht streit grönland gegnern seiner pläne zöllen": {
+      "last_sent_ts": 1768590008,
+      "last_score": 7.172805555555556,
+      "last_pub_ts": 1768585429,
+      "last_url_hash": "d406ab0cd65f6d042a917bfbe3b8232589a356f3",
+      "last_title": "Trump droht im Streit um Grönland Gegnern seiner Pläne mit Zöllen"
+    },
+    "unbeliebte sohn südafrikas schwieriges verhältnis elon musk": {
+      "last_sent_ts": 1768590008,
+      "last_score": 4.565305555555556,
+      "last_pub_ts": 1768577959,
+      "last_url_hash": "d97b693de3dd00186331449ffa93d423782d74fd",
+      "last_title": "Der unbeliebte Sohn: Südafrikas schwieriges Verhältnis zu Elon Musk"
+    },
+    "nach protesten iran braucht nächsten funken": {
+      "last_sent_ts": 1768590008,
+      "last_score": 2.393472222222222,
+      "last_pub_ts": 1768589773,
+      "last_url_hash": "abf7d5f25d864086dd9f6f646d947f4329ae64cd",
+      "last_title": "Nach den Protesten im Iran: \"Es braucht nur den nächsten Funken\""
+    },
+    "tausende zivilisten fliehen möglicher offensive syrien": {
+      "last_sent_ts": 1768590008,
+      "last_score": 2.161972222222222,
+      "last_pub_ts": 1768581439,
+      "last_url_hash": "79f4288f1bda4187093bdbc6e66f199581e4b469",
+      "last_title": "Tausende Zivilisten fliehen vor möglicher Offensive in Syrien"
     }
   }
 }
