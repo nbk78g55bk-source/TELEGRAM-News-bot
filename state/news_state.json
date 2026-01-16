@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768504501,
+  "last_digest_ts": 1768539743,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-15_20",
+  "last_slot_id": "2026-01-16_06",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -82,7 +82,15 @@
     "f60bb001c41df49a097e7d7d04d1168f85c425f3": 1768504501,
     "0f0a24b21e397a533a6af321c783d79c25489761": 1768504501,
     "693b3c1477f52d3dcee63db7a3e17a73ec2748ef": 1768504501,
-    "7d944dc465cdc169f96dc52f1cb368246d329231": 1768504501
+    "7d944dc465cdc169f96dc52f1cb368246d329231": 1768504501,
+    "1f844a80bbf9ffe324794d085e132885143832c2": 1768539743,
+    "7a77752cf6e3a6c313ac5b3439531a8039205a29": 1768539743,
+    "bc32794052ad81e9cdb11fb5533427a8906de9e0": 1768539743,
+    "f5e30a93eb501987b0e022fc761a4e4cc4e8b123": 1768539743,
+    "8278971d97d6e2df6345c565e4385710188bea11": 1768539743,
+    "41991b1150d66204b6ca9287a3317cfc29f6431b": 1768539743,
+    "fef467aedd9a79eccf347f4807063b59b224d844": 1768539743,
+    "2d69b24cb28e95946092fdce84e0410251bf6deb": 1768539743
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -567,6 +575,62 @@
       "last_pub_ts": 1768495923,
       "last_url_hash": "7d944dc465cdc169f96dc52f1cb368246d329231",
       "last_title": "Ukraine-Krieg: Russland setzt auf tödlichere Angriffsdrohnen-Modelle"
+    },
+    "kaufhaus insolvent galeria eigentümer insolvenz betroffen": {
+      "last_sent_ts": 1768539743,
+      "last_score": 7.152583333333333,
+      "last_pub_ts": 1768534435,
+      "last_url_hash": "1f844a80bbf9ffe324794d085e132885143832c2",
+      "last_title": "US-Kaufhaus ist insolvent: Galeria-Eigentümer von Insolvenz betroffen"
+    },
+    "zölle sinken prozent trump macht milliarden deal taiwan": {
+      "last_sent_ts": 1768539743,
+      "last_score": 6.342819444444444,
+      "last_pub_ts": 1768517860,
+      "last_url_hash": "7a77752cf6e3a6c313ac5b3439531a8039205a29",
+      "last_title": "Zölle sinken auf 15 Prozent - Trump macht Milliarden-Deal mit Taiwan"
+    },
+    "wohnungsnot deutschland rentner junge menschen werden vertrieben": {
+      "last_sent_ts": 1768539743,
+      "last_score": 4.793277777777778,
+      "last_pub_ts": 1768535900,
+      "last_url_hash": "bc32794052ad81e9cdb11fb5533427a8906de9e0",
+      "last_title": "Wohnungsnot in Deutschland: Rentner und junge Menschen werden vertrieben"
+    },
+    "ukraine krieg sieht geringe fortschritte russischen angriffen": {
+      "last_sent_ts": 1768539743,
+      "last_score": 4.470833333333333,
+      "last_pub_ts": 1768530742,
+      "last_url_hash": "f5e30a93eb501987b0e022fc761a4e4cc4e8b123",
+      "last_title": "Ukraine-Krieg: ISW sieht geringe Fortschritte bei russischen Angriffen"
+    },
+    "bedeutet energie notstand ukraine": {
+      "last_sent_ts": 1768539743,
+      "last_score": 6.042194444444444,
+      "last_pub_ts": 1768537661,
+      "last_url_hash": "8278971d97d6e2df6345c565e4385710188bea11",
+      "last_title": "Was bedeutet der Energie-Notstand für die Ukraine?"
+    },
+    "berichte verlegen flugzeugträger abraham lincoln nach nahost": {
+      "last_sent_ts": 1768539743,
+      "last_score": 2.313194444444444,
+      "last_pub_ts": 1768536617,
+      "last_url_hash": "41991b1150d66204b6ca9287a3317cfc29f6431b",
+      "last_title": "Berichte: USA verlegen Flugzeugträger \"USS Abraham Lincoln\" nach Nahost"
+    },
+    "keine angst diplomatischer konfrontation": {
+      "last_sent_ts": 1768539743,
+      "last_score": 1.9992777777777775,
+      "last_pub_ts": 1768525316,
+      "last_url_hash": "fef467aedd9a79eccf347f4807063b59b224d844",
+      "last_title": "Keine Angst vor diplomatischer Konfrontation mit USA"
+    },
+    "trump sieht venezuelas oppositionsführerin weiter keine präsidentin": {
+      "last_sent_ts": 1768539743,
+      "last_score": 1.7529166666666665,
+      "last_pub_ts": 1768516447,
+      "last_url_hash": "2d69b24cb28e95946092fdce84e0410251bf6deb",
+      "last_title": "Trump sieht in Venezuelas Oppositionsführerin weiter keine Präsidentin"
     }
   }
 }
