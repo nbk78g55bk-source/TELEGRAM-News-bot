@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768546853,
+  "last_digest_ts": 1768571512,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-16_08",
+  "last_slot_id": "2026-01-16_14",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -98,7 +98,14 @@
     "ea908bfa4f681931184fab89b015a5010afcf34b": 1768546853,
     "ebc75e778df4f0dc655351b2cf3af45bbcebd7c4": 1768546853,
     "6d0b66273fff9b1cdecb55eba650c95468348a3c": 1768546853,
-    "fd37eb2aed14bac1913cf85562ce83de8f06859c": 1768546853
+    "fd37eb2aed14bac1913cf85562ce83de8f06859c": 1768546853,
+    "70539870d70eb603a95fa2094e0b50b48ad2e4db": 1768571512,
+    "16b85f9ea0059e7c65cb35a180568aad09872028": 1768571512,
+    "c5e007cacc9e2c35c52e1f51442f3f580552677a": 1768571512,
+    "0255cf9865312e3f6277e50ffecb6a36e1638910": 1768571512,
+    "80d911a2bdaa62c13c5b9307779448d6b2121c17": 1768571512,
+    "dba2f82c9db038c37ee67747a6aa9bd23a849913": 1768571512,
+    "2f6f828d47ea3e11a765a38e9c966f0d142b3403": 1768571512
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -695,6 +702,55 @@
       "last_pub_ts": 1768546347,
       "last_url_hash": "fd37eb2aed14bac1913cf85562ce83de8f06859c",
       "last_title": "Brandkatastrophe in Crans-Montana - Justizbehörden in der Kritik"
+    },
+    "folgen zölle groß schaden deutsche wirtschaft": {
+      "last_sent_ts": 1768571512,
+      "last_score": 8.325416666666666,
+      "last_pub_ts": 1768565226,
+      "last_url_hash": "70539870d70eb603a95fa2094e0b50b48ad2e4db",
+      "last_title": "Folgen der US-Zölle: Wie groß der Schaden für die deutsche Wirtschaft ist"
+    },
+    "taiwan schließen handelsabkommen": {
+      "last_sent_ts": 1768571512,
+      "last_score": 8.064138888888888,
+      "last_pub_ts": 1768555820,
+      "last_url_hash": "16b85f9ea0059e7c65cb35a180568aad09872028",
+      "last_title": "USA und Taiwan schließen Handelsabkommen"
+    },
+    "stahlkonstruktion gibt nach baukran unglück thailand": {
+      "last_sent_ts": 1768571512,
+      "last_score": 4.680368055555556,
+      "last_pub_ts": 1768570740,
+      "last_url_hash": "c5e007cacc9e2c35c52e1f51442f3f580552677a",
+      "last_title": "Stahlkonstruktion gibt nach - Baukran-Unglück in Thailand"
+    },
+    "brandenburg wollen über koalition verhandeln": {
+      "last_sent_ts": 1768571512,
+      "last_score": 4.632650462962963,
+      "last_pub_ts": 1768568866,
+      "last_url_hash": "0255cf9865312e3f6277e50ffecb6a36e1638910",
+      "last_title": "Brandenburg: SPD und CDU wollen über Koalition verhandeln"
+    },
+    "militärjunta myanmar bevölkerung einschüchtert": {
+      "last_sent_ts": 1768571512,
+      "last_score": 5.9937499999999995,
+      "last_pub_ts": 1768567686,
+      "last_url_hash": "80d911a2bdaa62c13c5b9307779448d6b2121c17",
+      "last_title": "Wie die Militärjunta in Myanmar die Bevölkerung einschüchtert"
+    },
+    "südkoreas staatschef yoon fünf jahren haft verurteilt": {
+      "last_sent_ts": 1768571512,
+      "last_score": 4.447972222222222,
+      "last_pub_ts": 1768555238,
+      "last_url_hash": "dba2f82c9db038c37ee67747a6aa9bd23a849913",
+      "last_title": "Südkoreas Ex-Staatschef Yoon zu fünf Jahren Haft verurteilt"
+    },
+    "überschwemmungen nationalpark südafrika mindestens zehn tote": {
+      "last_sent_ts": 1768571512,
+      "last_score": 1.9738611111111108,
+      "last_pub_ts": 1768556170,
+      "last_url_hash": "2f6f828d47ea3e11a765a38e9c966f0d142b3403",
+      "last_title": "Überschwemmungen bei Nationalpark in Südafrika: Mindestens zehn Tote"
     }
   }
 }
