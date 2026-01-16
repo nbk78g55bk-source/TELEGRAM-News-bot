@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768539743,
+  "last_digest_ts": 1768546853,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,7 +12,7 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-16_06",
+  "last_slot_id": "2026-01-16_08",
   "seen_urls": {
     "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
     "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
@@ -90,7 +90,15 @@
     "8278971d97d6e2df6345c565e4385710188bea11": 1768539743,
     "41991b1150d66204b6ca9287a3317cfc29f6431b": 1768539743,
     "fef467aedd9a79eccf347f4807063b59b224d844": 1768539743,
-    "2d69b24cb28e95946092fdce84e0410251bf6deb": 1768539743
+    "2d69b24cb28e95946092fdce84e0410251bf6deb": 1768539743,
+    "d8b6da7135b12beb87ae76c000f334e0345caada": 1768546853,
+    "f9c3987920f76bf0d56504c258aee808e7d56276": 1768546853,
+    "ede79e4f4616c498076f44d67f7a3354dd894f4c": 1768546853,
+    "2b73d2db8a23dabbfbe2564a93ffbd9f4e537e39": 1768546853,
+    "ea908bfa4f681931184fab89b015a5010afcf34b": 1768546853,
+    "ebc75e778df4f0dc655351b2cf3af45bbcebd7c4": 1768546853,
+    "6d0b66273fff9b1cdecb55eba650c95468348a3c": 1768546853,
+    "fd37eb2aed14bac1913cf85562ce83de8f06859c": 1768546853
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -631,6 +639,62 @@
       "last_pub_ts": 1768516447,
       "last_url_hash": "2d69b24cb28e95946092fdce84e0410251bf6deb",
       "last_title": "Trump sieht in Venezuelas Oppositionsführerin weiter keine Präsidentin"
+    },
+    "rätsel iran angriff kuscht trump mullahs": {
+      "last_sent_ts": 1768546853,
+      "last_score": 4.7,
+      "last_pub_ts": 1768548464,
+      "last_url_hash": "d8b6da7135b12beb87ae76c000f334e0345caada",
+      "last_title": "Rätsel um Iran-Angriff - Kuscht Trump vor den Mullahs?"
+    },
+    "regierung will neue gaskraftwerke ausschreiben stimmt": {
+      "last_sent_ts": 1768546853,
+      "last_score": 3.801361111111111,
+      "last_pub_ts": 1768510902,
+      "last_url_hash": "f9c3987920f76bf0d56504c258aee808e7d56276",
+      "last_title": "Regierung will neue Gaskraftwerke ausschreiben - EU stimmt zu"
+    },
+    "marktbericht gewinnmitnahmen wochenende": {
+      "last_sent_ts": 1768546853,
+      "last_score": 3.5818055555555555,
+      "last_pub_ts": 1768546198,
+      "last_url_hash": "ede79e4f4616c498076f44d67f7a3354dd894f4c",
+      "last_title": "Marktbericht: Gewinnmitnahmen vor dem Wochenende?"
+    },
+    "stahl konzern worthington steel will klöckner übernehmen": {
+      "last_sent_ts": 1768546853,
+      "last_score": 3.5570555555555554,
+      "last_pub_ts": 1768545307,
+      "last_url_hash": "2b73d2db8a23dabbfbe2564a93ffbd9f4e537e39",
+      "last_title": "Stahl: US-Konzern Worthington Steel will Klöckner & Co übernehmen"
+    },
+    "machado überreicht trump ihre friedensnobelpreis medaille": {
+      "last_sent_ts": 1768546853,
+      "last_score": 2.396916666666667,
+      "last_pub_ts": 1768546742,
+      "last_url_hash": "ea908bfa4f681931184fab89b015a5010afcf34b",
+      "last_title": "Machado überreicht Trump ihre Friedensnobelpreis-Medaille"
+    },
+    "altersgrenze social media millionen konten australien offline": {
+      "last_sent_ts": 1768546853,
+      "last_score": 2.3410277777777777,
+      "last_pub_ts": 1768544730,
+      "last_url_hash": "ebc75e778df4f0dc655351b2cf3af45bbcebd7c4",
+      "last_title": "Altersgrenze für Social-Media - Millionen Konten in Australien offline"
+    },
+    "pistorius grönland streit haben einem machtspiel": {
+      "last_sent_ts": 1768546853,
+      "last_score": 1.2469722222222221,
+      "last_pub_ts": 1768505344,
+      "last_url_hash": "6d0b66273fff9b1cdecb55eba650c95468348a3c",
+      "last_title": "Pistorius zum Grönland-Streit: \"Wir haben es mit einem Machtspiel zu tun\""
+    },
+    "brandkatastrophe crans montana justizbehörden kritik": {
+      "last_sent_ts": 1768546853,
+      "last_score": 2.3859444444444446,
+      "last_pub_ts": 1768546347,
+      "last_url_hash": "fd37eb2aed14bac1913cf85562ce83de8f06859c",
+      "last_title": "Brandkatastrophe in Crans-Montana - Justizbehörden in der Kritik"
     }
   }
 }
