@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768590008,
+  "last_digest_ts": 1768657048,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,16 +12,8 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-16_20",
+  "last_slot_id": "2026-01-17_14",
   "seen_urls": {
-    "f2f2a419c653700c137c083f10d46410ac365a67": 1768383199,
-    "c58eec6b43a90830802585a0566ad7706f46e3c5": 1768383199,
-    "ff963f7d36b22773a6f5b728548ad091b776c7ff": 1768383199,
-    "cbba44df278962471a4322109663c38afe8dd531": 1768383199,
-    "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768383199,
-    "7e8fff02c09c4251092a32803ea7c0f1c54cdc41": 1768383199,
-    "7989578061ea33720c451f02ebcf7a3b14967fcb": 1768383199,
-    "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768383199,
     "0cac13e68b73d64d28290455611d495be22cd6ad": 1768398850,
     "7f7786337bde3b38a2e4608e6db6913a6db8e8d1": 1768398850,
     "45e4d51c9bd1fa857403d0da298aae62053e896b": 1768398850,
@@ -113,7 +105,15 @@
     "d406ab0cd65f6d042a917bfbe3b8232589a356f3": 1768590008,
     "d97b693de3dd00186331449ffa93d423782d74fd": 1768590008,
     "abf7d5f25d864086dd9f6f646d947f4329ae64cd": 1768590008,
-    "79f4288f1bda4187093bdbc6e66f199581e4b469": 1768590008
+    "79f4288f1bda4187093bdbc6e66f199581e4b469": 1768590008,
+    "ea53217b3e852e7b40302ca333f3e65d83e7350d": 1768657048,
+    "f5984cef37766197b84cab7b1909f82e80b8015b": 1768657048,
+    "ea3e91bd498832438128c3191aaa05d208c0f8e9": 1768657048,
+    "8792c324b6c7fc4d4fd2890248fe0759ec0da614": 1768657048,
+    "4b9840457270c8469ace6d529b816e9fd2b45005": 1768657048,
+    "3411d38d844deca82a8188bdcd11c5cc57417f13": 1768657048,
+    "c5765bb92e79cb3f8cc73faa70f15d50c3441b5d": 1768657048,
+    "cf975a9e1e1d687b8a610676f58f651b727a8449": 1768657048
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -815,6 +815,62 @@
       "last_pub_ts": 1768581439,
       "last_url_hash": "79f4288f1bda4187093bdbc6e66f199581e4b469",
       "last_title": "Tausende Zivilisten fliehen vor möglicher Offensive in Syrien"
+    },
+    "trump droht gegnern grönland plänen": {
+      "last_sent_ts": 1768657048,
+      "last_score": 6.0239212962962965,
+      "last_pub_ts": 1768622641,
+      "last_url_hash": "ea53217b3e852e7b40302ca333f3e65d83e7350d",
+      "last_title": "Trump droht Gegnern von Grönland-Plänen"
+    },
+    "insolvenz revo hotelgruppe insolvent mitarbeiter betroffen": {
+      "last_sent_ts": 1768657048,
+      "last_score": 5.760555555555555,
+      "last_pub_ts": 1768644827,
+      "last_url_hash": "f5984cef37766197b84cab7b1909f82e80b8015b",
+      "last_title": "Insolvenz: Revo-Hotelgruppe ist insolvent – 5.550 Mitarbeiter betroffen"
+    },
+    "karlspreis 2026 präsident mario draghi erhält auszeichnung": {
+      "last_sent_ts": 1768657048,
+      "last_score": 5.7237638888888895,
+      "last_pub_ts": 1768654053,
+      "last_url_hash": "ea3e91bd498832438128c3191aaa05d208c0f8e9",
+      "last_title": "Karlspreis 2026: Ex-EZB-Präsident Mario Draghi erhält Auszeichnung"
+    },
+    "showdown ostsee putins zombie tanker flüchtet bundespolizei": {
+      "last_sent_ts": 1768657048,
+      "last_score": 5.57269212962963,
+      "last_pub_ts": 1768648120,
+      "last_url_hash": "8792c324b6c7fc4d4fd2890248fe0759ec0da614",
+      "last_title": "Showdown in der Ostsee - Putins „Zombie-Tanker“ flüchtet vor Bundespolizei"
+    },
+    "argentiniens autobranche zittert nach mercosur abkommen": {
+      "last_sent_ts": 1768657048,
+      "last_score": 4.6335,
+      "last_pub_ts": 1768647453,
+      "last_url_hash": "4b9840457270c8469ace6d529b816e9fd2b45005",
+      "last_title": "Argentiniens Autobranche zittert nach Mercosur-Abkommen"
+    },
+    "gericht schränkt befugnisse beamten einwanderungsbehörde": {
+      "last_sent_ts": 1768657048,
+      "last_score": 2.319861111111111,
+      "last_pub_ts": 1768654162,
+      "last_url_hash": "3411d38d844deca82a8188bdcd11c5cc57417f13",
+      "last_title": "Gericht schränkt Befugnisse von Beamten der US-Einwanderungsbehörde ein"
+    },
+    "regierung ernennt mitglieder gaza friedensrats": {
+      "last_sent_ts": 1768657048,
+      "last_score": 2.206861111111111,
+      "last_pub_ts": 1768650094,
+      "last_url_hash": "c5765bb92e79cb3f8cc73faa70f15d50c3441b5d",
+      "last_title": "US-Regierung ernennt Mitglieder des Gaza-\"Friedensrats\""
+    },
+    "eskaliert konflikt zwischen regierung kurden syrien": {
+      "last_sent_ts": 1768657048,
+      "last_score": 2.1219722222222224,
+      "last_pub_ts": 1768647038,
+      "last_url_hash": "cf975a9e1e1d687b8a610676f58f651b727a8449",
+      "last_title": "Eskaliert der Konflikt zwischen Regierung und Kurden in Syrien?"
     }
   }
 }
