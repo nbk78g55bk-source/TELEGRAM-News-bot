@@ -1,5 +1,5 @@
 {
-  "last_digest_ts": 1768657048,
+  "last_digest_ts": 1768743496,
   "seen": {
     "23c0f25d68f1d09cc6a3f5070657c5690ac4c8ae": 1768382084,
     "1d6cbd9704b8f22c77834bbccfacafbabb8736a8": 1768382084,
@@ -12,49 +12,8 @@
     "c3d584f39ddea7d17a16637a7be4c0ad37729a44": 1768382084,
     "4c618ba0702c9bed7c820803f99a8f4fc7070776": 1768382084
   },
-  "last_slot_id": "2026-01-17_14",
+  "last_slot_id": "2026-01-18_14",
   "seen_urls": {
-    "0cac13e68b73d64d28290455611d495be22cd6ad": 1768398850,
-    "7f7786337bde3b38a2e4608e6db6913a6db8e8d1": 1768398850,
-    "45e4d51c9bd1fa857403d0da298aae62053e896b": 1768398850,
-    "9ab9a2a49c51a1eac396872695dafc158affc41e": 1768398850,
-    "df5ea8961f4459907a117187c6e4a2b53feda64a": 1768398850,
-    "7f967f57b0a5de2fa00b3a97a76d095dccb10983": 1768398850,
-    "ec5d94de3233799b81d901dd56df09380fdc532d": 1768398850,
-    "2e38ace0405d22e42360e5f8381d01bd8b2dba62": 1768398850,
-    "e2ecc37277f32de4c830a0ef1b943f54a46ebd7f": 1768410147,
-    "7cce2d85be4f4d8f6bc0ce84d301325cc1b1c7ca": 1768410147,
-    "75723b8b3ffcc0ddb2bd0562c32b1f788fbbf1c5": 1768410147,
-    "8ed64c217ec6a22bd1c13428710d1c31e1f62d86": 1768410147,
-    "3df1b7e840f510a6f56e4d80396abaa18daad29d": 1768410147,
-    "efa8372cee2a77b6d8eed8266ddef15c96d78ba5": 1768410147,
-    "f54b617976cde942325b78f324f93d3e92e9c475": 1768410147,
-    "87e4327e0892dbab86c4cbb6950277bb1b5d6896": 1768410147,
-    "d66aaea4e21ac664e7e7096918b59986d0aaef84": 1768417209,
-    "e5c4e782f3512a4b9086059e5ed7c30f6c35f426": 1768417209,
-    "94f13637b85fd7c698a9a08d12a1d6238794d8af": 1768417209,
-    "408f96f79452dede785979f5954206c315d54f53": 1768417209,
-    "c10a5025000356233157d75b35c86d61f3c9afd7": 1768417209,
-    "11120422cc4a1b5545170d317c515254b7c39aa5": 1768417209,
-    "59cc2c669ae4e62891d6d67e52d2729a0e058b11": 1768417209,
-    "f0d2d617e95d3cf6af4dc48e63e7ab6f7f7be352": 1768417209,
-    "66820cd7d378dfc498d3331282bd3a08146e19d1": 1768453409,
-    "586565868cf5bde9a734c2310d8dd57d60b6ac61": 1768453409,
-    "43b7880b31d8bd9fe977624b53d652b577f6d443": 1768453409,
-    "9f1fe4fd5107baa10d6755d5a8b5866c606f2ebd": 1768453409,
-    "4351016815756e706015f2f65dbcc16a44859299": 1768453409,
-    "fee6551a1682e8342258d073b6e3d5bbff23c6c8": 1768453409,
-    "021460cb92ee169baa4fd77e2f3023804cff13c3": 1768453409,
-    "c666a641008eeeba9b0a3fb961acac2ab12a8a23": 1768453409,
-    "f7adb230aed43c32b542c3304bf0331384d32149": 1768460496,
-    "747327dc2f779453b04cbf9a4457c0472c0659f3": 1768460496,
-    "f2e69b1ef4101395248136edafc857363fdd367b": 1768460496,
-    "700414ad7b6ca6477b035ce01d41f6220ac656a5": 1768460496,
-    "82df59a61cb3265b6df0f28ed09b8131d7fd5a3d": 1768460496,
-    "06bb3ac8ccb10413a73371f3364e84118be3f703": 1768460496,
-    "8186b5867669c166db35cf6900ab2a8c90fd192b": 1768460496,
-    "e6affb8867948e0cbf72470aa779be9b50836b80": 1768460496,
-    "4666fd7af8f8c8f2e4766136e089102aa018281a": 1768460496,
     "52bf4be10e9f3bc40d429b27cfa23fa69162e258": 1768485250,
     "edd542d5b9ccb26fa0e19a6213c6cf96753eac91": 1768485250,
     "923f4f2f506bc5c70431277349de938e7d21f75e": 1768485250,
@@ -113,7 +72,15 @@
     "4b9840457270c8469ace6d529b816e9fd2b45005": 1768657048,
     "3411d38d844deca82a8188bdcd11c5cc57417f13": 1768657048,
     "c5765bb92e79cb3f8cc73faa70f15d50c3441b5d": 1768657048,
-    "cf975a9e1e1d687b8a610676f58f651b727a8449": 1768657048
+    "cf975a9e1e1d687b8a610676f58f651b727a8449": 1768657048,
+    "0006be826d6be12b5601f274deff82f6cfaf5e0e": 1768743496,
+    "be3d1605f65c5d4a8ad35938191e133796f21be2": 1768743496,
+    "21f337782932a971a7d29b72353460234884783a": 1768743496,
+    "ae9d1d1476ce9b0d212f65268e0fd5d2960c283d": 1768743496,
+    "aeb2ca16e91b965af46ae4e22cf6bd28cb1e4244": 1768743496,
+    "97b6dfdf6172eb4887996e38fe27489e74ee3c41": 1768743496,
+    "0e6f1ff46457b519a2186ae8144e647c10b2c16b": 1768743496,
+    "353988d68503a5bfd7dc41d9897669cdd2490a76": 1768743496
   },
   "topics": {
     "tagesgeld zinsen aktuell prozent eine bank zahlt meisten": {
@@ -871,6 +838,62 @@
       "last_pub_ts": 1768647038,
       "last_url_hash": "cf975a9e1e1d687b8a610676f58f651b727a8449",
       "last_title": "Eskaliert der Konflikt zwischen Regierung und Kurden in Syrien?"
+    },
+    "außenhändler trumps zoll drohung geht mehr handel": {
+      "last_sent_ts": 1768743496,
+      "last_score": 8.33361111111111,
+      "last_pub_ts": 1768737505,
+      "last_url_hash": "0006be826d6be12b5601f274deff82f6cfaf5e0e",
+      "last_title": "Außenhändler zu Trumps Zoll-Drohung: \"Es geht um mehr als Handel\""
+    },
+    "zoll ankündigung trump droht merz schaut fußball": {
+      "last_sent_ts": 1768743496,
+      "last_score": 7.518597222222222,
+      "last_pub_ts": 1768724589,
+      "last_url_hash": "be3d1605f65c5d4a8ad35938191e133796f21be2",
+      "last_title": "US-Zoll-Ankündigung: Trump droht und Merz schaut Fußball"
+    },
+    "kommentar politik vize filipp piatov warum europas nato hysterie alles schlimmer macht": {
+      "last_sent_ts": 1768743496,
+      "last_score": 6.9,
+      "last_pub_ts": 1768744972,
+      "last_url_hash": "21f337782932a971a7d29b72353460234884783a",
+      "last_title": "Kommentar von Politik-Vize Filipp Piatov - Warum Europas Nato-Hysterie alles nur schlimmer macht"
+    },
+    "grönland streit europäer warnen erklärung eskalation": {
+      "last_sent_ts": 1768743496,
+      "last_score": 6.874613425925927,
+      "last_pub_ts": 1768742498,
+      "last_url_hash": "ae9d1d1476ce9b0d212f65268e0fd5d2960c283d",
+      "last_title": "Grönland-Streit mit USA: Europäer warnen in Erklärung vor \"Eskalation\""
+    },
+    "widerstand gegen trumps zollpolitik": {
+      "last_sent_ts": 1768743496,
+      "last_score": 7.967888888888889,
+      "last_pub_ts": 1768724339,
+      "last_url_hash": "aeb2ca16e91b965af46ae4e22cf6bd28cb1e4244",
+      "last_title": "Widerstand gegen Trumps Zollpolitik in den USA"
+    },
+    "will schnell zoll ankündigung reagieren": {
+      "last_sent_ts": 1768743496,
+      "last_score": 3.2209166666666667,
+      "last_pub_ts": 1768729848,
+      "last_url_hash": "97b6dfdf6172eb4887996e38fe27489e74ee3c41",
+      "last_title": "EU will schnell auf US-Zoll-Ankündigung reagieren"
+    },
+    "syrische armee rückt weiter kurdengebieten": {
+      "last_sent_ts": 1768743496,
+      "last_score": 2.246277777777778,
+      "last_pub_ts": 1768737961,
+      "last_url_hash": "0e6f1ff46457b519a2186ae8144e647c10b2c16b",
+      "last_title": "Syrische Armee rückt weiter in Kurdengebieten vor"
+    },
+    "tausende dänen protestieren gegen trumps grönland pläne": {
+      "last_sent_ts": 1768743496,
+      "last_score": 1.469361111111111,
+      "last_pub_ts": 1768666792,
+      "last_url_hash": "353988d68503a5bfd7dc41d9897669cdd2490a76",
+      "last_title": "Tausende Dänen protestieren gegen Trumps Grönland-Pläne"
     }
   }
 }
